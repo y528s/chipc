@@ -2,13 +2,14 @@
 
 Static, self-contained mockups for the City & Hackney IPC website refresh.
 
-## The combined IPC Hub prototype (Design 1, every page)
-- **`portal/index.html` — the full click-through prototype** of the combined IPC Hub:
-  the GP section and Members Portal merged into one site with one nav and one search.
-  Clinical content (Pathways, Services, Topics) is open; members-only content
-  (Bulletins, Contracts, Policies, Staff Bank and member documents) is marked 🔒.
-- One merged document library (GP-Section pattern) with open and members-only
-  documents side by side, plus a document page with in-browser preview.
+## The consolidated IPC Portal prototype (Design 1, every page)
+- **`portal/index.html` — the full click-through prototype** of the new model:
+  the separate IPC area goes away, and the GP section and IPC content consolidate
+  into one flat portal. Bulletins, Contracts, Policies and Staff Bank sit in the
+  main nav as peers of Pathways, Services and Documents; access is per item —
+  member-practice content simply carries a 🔒 wherever it appears.
+- One merged document library (GP-Section pattern) with open and 🔒 documents
+  side by side, plus a document page with in-browser preview.
 - Every page has a **"✎ Admin: edit this page"** button demonstrating the front-end
   editing model for the WordPress rebuild (demo edits save to the browser).
 - **`portal/plan.html`** — one-page stakeholder rebuild plan (merged front + back end,
