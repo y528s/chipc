@@ -240,6 +240,20 @@ a.chip:hover { background: rgba(255,255,255,0.28); color: #fff; }
 .tile .go.blue { color: var(--ipc-blue); }
 .tile .go.purple { color: var(--ipc-purple); }
 
+/* Framed group for the IPC row — one "login needed" indicator for the set */
+.lock-frame {
+  position: relative; margin-top: 30px;
+  border: 1.5px solid #e0c98c; background: rgba(198, 138, 0, 0.06);
+  border-radius: 16px; padding: 24px 16px 16px;
+}
+.lock-frame .frame-tag {
+  position: absolute; top: -14px; left: 18px;
+  background: var(--ipc-gold); color: #fff;
+  font-family: var(--font-head); font-weight: 600; font-size: 12px; letter-spacing: 0.03em;
+  padding: 5px 16px; border-radius: 999px; box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.lock-frame .tiles { margin-top: 0; }
+
 .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
 @media (max-width: 900px) { .grid-2 { grid-template-columns: 1fr; } }
 
