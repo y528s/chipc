@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rebuild Plan — City &amp; Hackney IPC Members Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/portal.css">
+<style>
+  .plan-wrap { max-width: 880px; margin: 0 auto; padding: 40px 24px 80px; }
+  .plan-wrap h1 { font-family: var(--font-head); font-size: 30px; color: var(--ink-head); line-height: 1.2; }
+  .plan-wrap .lede { font-size: 16px; color: var(--ink-soft); margin-top: 8px; }
+  .plan-wrap h2 { font-family: var(--font-head); font-size: 19px; color: var(--ipc-green); margin: 34px 0 10px; padding-bottom: 6px; border-bottom: 2px solid var(--ipc-teal); }
+  .plan-wrap p, .plan-wrap li { font-size: 14.5px; color: var(--ink); line-height: 1.65; }
+  .plan-wrap ul, .plan-wrap ol { padding-left: 22px; margin-top: 6px; }
+  .plan-wrap li { margin-bottom: 5px; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 700px) { .cols { grid-template-columns: 1fr; } }
+  .box { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 16px 20px; }
+  .box h3 { font-family: var(--font-head); font-size: 14.5px; color: var(--ink-head); margin-bottom: 6px; }
+  .keep { border-left: 4px solid var(--ipc-gold); }
+  .change { border-left: 4px solid var(--ipc-green); }
+  .steps { counter-reset: step; list-style: none; padding-left: 0; }
+  .steps li { counter-increment: step; display: flex; gap: 14px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--line-soft); margin: 0; }
+  .steps li::before { content: counter(step); flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--ipc-green); color: #fff; font-family: var(--font-head); font-weight: 700; font-size: 13px; display: grid; place-items: center; }
+  .steps .now::before { background: var(--ipc-gold); }
+  .sitemap { font-size: 13.5px; line-height: 2; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 18px 22px; }
+  .sitemap a { font-weight: 600; }
+  .sitemap .lvl2 { padding-left: 26px; }
+  .sitemap .note { color: var(--grey); font-size: 12.5px; }
+  .approve { background: var(--ipc-green); color: #fff; border-radius: 12px; padding: 22px 26px; margin-top: 36px; }
+  .approve h2 { color: #fff; border: 0; margin: 0 0 6px; }
+  .approve p { color: #DCE9DF; }
+</style>
+</head>
+<body>
+<div class="proto-strip">
+  <span class="tag">CHIPC PROTOTYPE</span>
+  <span>Members Portal redesign — stakeholder plan</span>
+  <nav><a href="index.html">← Back to the prototype</a></nav>
+</div>
+
+<div class="plan-wrap">
+  <h1>City &amp; Hackney IPC Members Portal — rebuild plan on a page</h1>
+  <p class="lede">What we're changing, what stays the same, and how we get from this prototype to the live site — for sign-off.</p>
+
+  <h2>The goal</h2>
+  <p>Rebuild the IPC area (Members Portal) to match the approved design (<b>Design 1 — The IPC Hub</b>): search-first, consistent across every page, and <b>editable by IPC admins directly on the page</b> — no developer needed for day-to-day content changes.</p>
+
+  <h2>What changes / what stays</h2>
+  <div class="cols">
+    <div class="box change">
+      <h3>Changes</h3>
+      <ul>
+        <li><b>Every portal page</b> gets the approved design — one consistent header, search and card system.</li>
+        <li><b>IPC Documents</b> adopt the pattern designed for the GP Section: search-first library, type filters, popular / recently-updated panels, and a proper document page with in-browser preview.</li>
+        <li><b>Front-end editing</b> — admins toggle "edit" on any page and change text in place (try the <i>✎ Admin: edit this page</i> button on the prototype).</li>
+        <li><b>One consolidated admin area</b> — a single, tidy back end for the whole IPC area instead of scattered edit screens.</li>
+      </ul>
+    </div>
+    <div class="box keep">
+      <h3>Stays the same</h3>
+      <ul>
+        <li><b>Bulletins</b> — content and weekly publishing workflow are unchanged; only the page chrome is refreshed.</li>
+        <li><b>All existing content</b> — documents, contracts, policies migrate over; nothing is lost.</li>
+        <li><b>Logins</b> — members keep their existing accounts.</li>
+        <li><b>The GP Section</b> — already designed; the portal now matches it.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Every page in the new portal (all clickable in this prototype)</h2>
+  <div class="sitemap">
+    <div>🏠 <a href="index.html">Portal home</a> <span class="note">— search hero, quick access, popular / recent, events &amp; news</span></div>
+    <div class="lvl2">▤ <a href="bulletins.html">Bulletins</a> <span class="note">— as-is content, refreshed chrome</span></div>
+    <div class="lvl2">✎ <a href="contracts.html">Contracts</a> → <a href="contract-duty-doctor.html">contract page (e.g. Duty Doctor)</a> <span class="note">— resources, lead, about</span></div>
+    <div class="lvl2">▣ <a href="documents.html">Documents</a> → <a href="document.html">document page with preview</a> <span class="note">— GP-Section pattern</span></div>
+    <div class="lvl2">✓ <a href="policies.html">Policies</a> <span class="note">— owners, versions, review dates</span></div>
+    <div class="lvl2">☺ <a href="staff-bank.html">Staff Bank</a> <span class="note">— find work / find staff</span></div>
+    <div>🩺 <a href="gp.html">GP Hub</a> <span class="note">— the already-approved GP Section design (blue theme)</span></div>
+  </div>
+
+  <h2>How editing will work (WordPress)</h2>
+  <ul>
+    <li>The site is rebuilt as a <b>WordPress theme</b> matching this prototype exactly — each block here maps to an editable block in WordPress.</li>
+    <li><b>Admins edit the front page (and every page) in place</b>; editors see the page exactly as members do.</li>
+    <li>Documents, contracts and policies become <b>structured content types</b> — upload a file, pick the contract/topic, and every listing, search result and "recently updated" panel updates itself.</li>
+    <li>One <b>consolidated IPC dashboard</b> in the back end: bulletins, documents, contracts, policies, events and news in a single menu, with clear roles for who can edit what.</li>
+  </ul>
+
+  <h2>Getting to live</h2>
+  <ol class="steps">
+    <li class="now"><span><b>Now — review this prototype.</b> Click through every page, try the admin edit button, and confirm the design and structure.</span></li>
+    <li><span><b>Sign-off.</b> Stakeholders approve the design and the plan on this page.</span></li>
+    <li><span><b>Build on staging.</b> WordPress theme + content types built to match the prototype on a private staging server; existing content migrated across.</span></li>
+    <li><span><b>Test.</b> Admins test editing; a small member group tests finding documents. Fixes applied on staging.</span></li>
+    <li><span><b>Go live.</b> Staging is pushed to the live server in one switchover; the old site is kept as a rollback for 30 days.</span></li>
+  </ol>
+
+  <div class="approve">
+    <h2>The ask</h2>
+    <p>Approve the design and this plan so the staging build can start. Feedback on any page of the prototype is welcome before sign-off — everything you see is still easy to change.</p>
+  </div>
+</div>
+</body>
+</html>

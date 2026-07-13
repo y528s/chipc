@@ -2,7 +2,19 @@
 
 Static, self-contained mockups for the City & Hackney IPC website refresh.
 
-## Contents
+## Members Portal prototype (Design 1, every page)
+- **`portal/index.html` — the full click-through prototype** of the Members Portal in the
+  approved Design 1 ("The IPC Hub") style: Portal home, Bulletins (as-is), Contracts +
+  contract page (Duty Doctor), Documents (GP-Section pattern) + document page, Policies,
+  Staff Bank, and the GP Hub.
+- Every page has a **"✎ Admin: edit this page"** button demonstrating the front-end
+  editing model for the WordPress rebuild (demo edits save to the browser).
+- **`portal/plan.html`** — one-page stakeholder rebuild plan (sitemap, editing model,
+  staging → live rollout) for sign-off.
+- Clean semantic HTML/CSS (`portal/assets/portal.css`), structured to map 1:1 onto
+  WordPress theme template parts.
+
+## Contents (original design boards)
 - `index.html` — start here (links to all three designs)
 - `design-1-ipc-hub.html` — Design 1: The IPC Hub (search-first, recommended)
 - `design-2-rich-gradient.html` — Design 2: Rich Gradient
