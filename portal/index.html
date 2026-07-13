@@ -3,169 +3,47 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The IPC Hub — City &amp; Hackney IPC Hub</title>
+<title>City &amp; Hackney IPC Portal — design demo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/portal.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/portal.css">
 </head>
-<body>
-<div class="proto-strip">
-  <span class="tag">⚠ DEMO SITE</span>
-  <span>This is a design demo only — all pages, links and content are illustrative and are not the real IPC pages.</span>
-  <nav>
-    <a href="index.html">Portal home</a>
-    <a href="admin.html">🛠 Back-end preview</a>
-    <a href="plan.html">📋 Stakeholder plan</a>
-  </nav>
-</div>
-<header class="site-head">
-  <a class="logo" href="index.html"><img src="assets/cipc-logo-white.png" alt="City and Hackney Integrated Primary Care"></a>
-  <span class="login-status"><span class="dot"></span>You are logged in</span>
-  <button class="search-btn" type="button" aria-label="Search">⌕</button>
-  <nav class="site-nav">
-    <a href="index.html" class="active">HOME</a>
-    <span class="menu">
-      <a href="pathways.html">GENERAL PRACTICE ⌄</a>
-      <span class="dropdown"><span class="dd-panel">
-      <a href="pathways.html"><span class="ico-s">↝</span>Pathways</a>
-      <a href="services.html"><span class="ico-s">▦</span>Services</a>
-      <a href="topics.html"><span class="ico-s">◧</span>Topics</a>
-      </span></span>
-    </span>
-    <span class="menu">
-      <a href="bulletins.html"><span class="lock">🔒</span> IPC ⌄</a>
-      <span class="dropdown"><span class="dd-panel">
-      <a href="bulletins.html"><span class="ico-s">▤</span>Bulletins <span class="lock">🔒</span></a>
-      <a href="contracts.html"><span class="ico-s">✎</span>Contracts <span class="lock">🔒</span></a>
-      <a href="documents.html"><span class="ico-s">▣</span>Documents <span class="lock">🔒</span></a>
-      <a href="policies.html"><span class="ico-s">✓</span>Policies <span class="lock">🔒</span></a>
-      <a href="staff-bank.html"><span class="ico-s">☺</span>Staff Bank <span class="lock">🔒</span></a>
-      </span></span>
-    </span>
-    <a href="saved.html"><span class="lock" style="opacity:1;">☆</span> SAVED</a>
-  </nav>
-</header>
-<div class="lock-note"><span class="lock">🔒</span> marks member-practice content — everything else on the portal is open to all City &amp; Hackney practice staff. One site, one login, one search.</div>
-<section class="hero">
-  <div class="hero-grid">
-    <div>
-      <h1 data-edit>One portal for City &amp; Hackney primary care</h1>
-      <div class="sub" data-edit>Clinical pathways, local services, documents, contracts and more — one portal, one login, one search.</div>
-      <div class="searchbar" role="search">
-        <span class="icon">⌕</span>
-        <input type="search" placeholder="Search pathways, services, documents, contracts and more…">
-        <button type="button">Search</button>
-      </div>
-      <div class="chips" data-edit>
-        <span class="label">Popular:</span>
-        <a class="chip" href="pathways.html">ADHD</a>
-        <a class="chip" href="contract-duty-doctor.html"><span class="lock">🔒</span> Duty Doctor</a>
-        <a class="chip" href="pathways.html">Chest pain</a>
-        <a class="chip" href="contracts.html"><span class="lock">🔒</span> Contracts 2026-27</a>
-        <a class="chip" href="pathways.html">COPD</a>
-        <a class="chip" href="staff-bank.html"><span class="lock">🔒</span> Staff Bank</a>
-      </div>
+<body data-chrome="banner">
+<div id="site-chrome"></div>
+
+<div class="launch-wrap">
+  <div style="text-align:center;">
+    <img src="assets/cipc-logo-white.png" alt="City and Hackney Integrated Primary Care" style="width:110px;">
+    <h1 style="color:#fff; font-weight:700; font-size:32px; margin-top:18px;">One portal for City &amp; Hackney primary care</h1>
+    <p style="color:rgba(255,255,255,0.82); font-size:16px; margin-top:10px; max-width:560px; margin-left:auto; margin-right:auto;">
+      A design demo: the GP clinical site and the IPC members area consolidated into one site —
+      one login, one search, one back end. Member content is simply marked &#128274; wherever it appears.
+    </p>
+
+    <div class="launch-cards">
+      <a class="launch-card" href="home.html">
+        <div class="tile-icon">&#8981;</div>
+        <h2>The portal</h2>
+        <p>The consolidated front end: search-first home, GP libraries and the IPC sections in one place.</p>
+        <span class="go">Open the portal &rsaquo;</span>
+      </a>
+      <a class="launch-card" href="admin.html">
+        <div class="tile-icon icon-blue">&#9881;</div>
+        <h2>The back end</h2>
+        <p>One WordPress admin for everything — including the "Members only" checkbox that adds the &#128274; automatically.</p>
+        <span class="go">Preview the back end &rsaquo;</span>
+      </a>
+      <a class="launch-card" href="plan.html">
+        <div class="tile-icon icon-gold">&#9744;</div>
+        <h2>The plan</h2>
+        <p>One page for stakeholders: what changes, what stays, how editing works, and the rollout.</p>
+        <span class="go">Read the plan &rsaquo;</span>
+      </a>
     </div>
-    <img class="hero-photo" src="assets/photo-gp-consult.jpg" alt="GP consultation">
   </div>
-</section>
+</div>
 
-<main class="wrap">
-  <section class="section">
-    <h2 class="section-title" data-edit>Quick access</h2>
-    <div class="tiles cols-4">
-      <a class="tile" href="pathways.html"><span class="ico blue">↝</span><h3>Pathways</h3><p data-edit>1,263 clinical pathways</p><div class="go blue">›</div></a>
-      <a class="tile" href="services.html"><span class="ico blue">▦</span><h3>Services</h3><p data-edit>Local services &amp; referrals</p><div class="go blue">›</div></a>
-      <a class="tile" href="topics.html"><span class="ico purple">◧</span><h3>Topics</h3><p data-edit>Browse by clinical area</p><div class="go purple">›</div></a>
-      <a class="tile" href="saved.html"><span class="ico">☆</span><h3>Saved items</h3><p data-edit>Your favourites, searchable</p><div class="go">›</div></a>
-    </div>
-    <div class="lock-frame">
-      <span class="frame-tag">🔒 IPC — login needed</span>
-      <div class="tiles">
-      <a class="tile" href="bulletins.html"><span class="ico">▤</span><h3>Bulletins</h3><p data-edit>Latest and archive IPC bulletins</p><div class="go">›</div></a>
-      <a class="tile" href="contracts.html"><span class="ico">✎</span><h3>Contracts</h3><p data-edit>Targets, training and delivery</p><div class="go">›</div></a>
-      <a class="tile" href="documents.html"><span class="ico">▣</span><h3>Documents</h3><p data-edit>Search the document library</p><div class="go">›</div></a>
-      <a class="tile" href="policies.html"><span class="ico">✓</span><h3>Policies</h3><p data-edit>Editable governance policies</p><div class="go">›</div></a>
-      <a class="tile" href="staff-bank.html"><span class="ico gold">☺</span><h3>Staff Bank</h3><p data-edit>Find work or staff in the IPC</p><div class="go gold">›</div></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section grid-2" style="padding-top:24px;">
-    <div class="card">
-      <div class="card-head"><h2>Popular this week</h2><a class="view-all" href="#">View all ›</a></div>
-      <div class="rows">
-        <a class="row" href="pathways.html"><span class="rank">1</span><span class="title" data-edit>ADHD in adults</span><span class="meta">Pathways</span></a>
-        <a class="row" href="contract-duty-doctor.html"><span class="rank">2</span><span class="title" data-edit><span class="lock">🔒</span> Duty Doctor guidance 2026/27</span><span class="meta">Contracts</span></a>
-        <a class="row" href="pathways.html"><span class="rank">3</span><span class="title" data-edit>Chest pain (primary care)</span><span class="meta">Pathways</span></a>
-        <a class="row" href="staff-bank.html"><span class="rank">4</span><span class="title" data-edit><span class="lock">🔒</span> Staff Bank registration</span><span class="meta">Staff Bank</span></a>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-head"><h2>Recently updated</h2><a class="view-all" href="#">View all ›</a></div>
-      <div class="rows">
-        <a class="row" href="pathways.html"><span class="badge docx">PATH</span><span class="title" data-edit>COPD pathway</span><span class="meta">Yesterday</span></a>
-        <a class="row" href="document.html"><span class="badge docx">DOCX</span><span class="title" data-edit><span class="lock">🔒</span> Smoking Cessation — Gloji referral form</span><span class="meta">2 days ago</span></a>
-        <a class="row" href="pathways.html"><span class="badge form">FORM</span><span class="title" data-edit>Cardiology referral form</span><span class="meta">3 days ago</span></a>
-        <a class="row" href="bulletins.html"><span class="badge pdf">PDF</span><span class="title" data-edit><span class="lock">🔒</span> IPC bulletin — weekly round-up</span><span class="meta">3 days ago</span></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" style="padding-top:24px;">
-    <div class="grid-2" style="margin-top:0;">
-      <div class="card">
-        <div class="card-head"><h2>Browse clinical topics</h2><a class="view-all" href="topics.html">All topics ›</a></div>
-        <div class="pills" data-edit>
-          <a class="pill" href="topics.html">Cardiology</a>
-          <a class="pill" href="topics.html">Dermatology</a>
-          <a class="pill" href="topics.html">Diabetes</a>
-          <a class="pill" href="topics.html">Gastroenterology</a>
-          <a class="pill" href="topics.html">Mental Health</a>
-          <a class="pill" href="topics.html">Respiratory</a>
-          <a class="pill" href="topics.html">Women's Health</a>
-          <a class="pill solid" href="topics.html">+ 24 more</a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-head"><h2><span class="lock">🔒</span> Browse contracts</h2><a class="view-all" href="contracts.html">All contracts ›</a></div>
-        <div class="pills" data-edit>
-          <a class="pill" href="contracts.html">Anticoagulation</a>
-          <a class="pill" href="contract-duty-doctor.html">Duty Doctor</a>
-          <a class="pill" href="contracts.html">Long Term Conditions</a>
-          <a class="pill" href="contracts.html">Phlebotomy</a>
-          <a class="pill" href="contracts.html">Smoking Cessation</a>
-          <a class="pill" href="contracts.html">Wound Care</a>
-          <a class="pill solid" href="contracts.html">+ 12 more</a>
-        </div>
-      </div>
-    </div>
-    <div class="grid-2">
-      <div class="card">
-        <div class="card-head"><h2>Upcoming events</h2></div>
-        <div class="event"><span class="date"><div class="mon">JUL</div><div class="day">22</div></span><span><h3 data-edit><span class="lock">🔒</span> Duty Doctor bitesize training</h3><div class="meta" data-edit>12:30 – 13:30 · Online</div></span></div>
-        <div class="event"><span class="date"><div class="mon">AUG</div><div class="day">05</div></span><span><h3 data-edit>PCN protected learning time</h3><div class="meta" data-edit>13:00 – 16:00 · St Leonard's</div></span></div>
-      </div>
-      <div class="card">
-        <div class="card-head"><h2>Latest news</h2></div>
-        <a class="news-item" href="#"><h3 data-edit><span class="lock">🔒</span> Contracts 2026-27 now live on the portal</h3><div class="meta">1 Jul 2026</div></a>
-        <a class="news-item" href="#"><h3 data-edit>New coaching &amp; mentoring offer launching soon</h3><div class="meta">24 Jun 2026</div></a>
-      </div>
-    </div>
-    <div class="contact-band">
-      <div class="body">
-        <h2 data-edit>Can't find what you're looking for?</h2>
-        <p data-edit>Contact the IPC team for help and support.</p>
-      </div>
-      <a class="btn-gold" href="#">Get in touch</a>
-    </div>
-  </section>
-</main>
-<footer class="site-foot">
-  <span>© 2026 City &amp; Hackney Integrated Primary Care</span>
-  <span><a href="#">Privacy</a> · <a href="#">Accessibility</a> · <a href="#">Terms</a></span>
-</footer>
-<script src="assets/edit.js"></script>
+<div id="site-footer"></div>
+<script src="js/portal.js"></script>
 </body>
 </html>

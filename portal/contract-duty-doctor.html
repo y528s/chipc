@@ -3,115 +3,115 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Duty Doctor — Contracts — City &amp; Hackney IPC Hub</title>
+<title>Duty Doctor 🔒 — City &amp; Hackney IPC Portal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/portal.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/portal.css">
 </head>
-<body>
-<div class="proto-strip">
-  <span class="tag">⚠ DEMO SITE</span>
-  <span>This is a design demo only — all pages, links and content are illustrative and are not the real IPC pages.</span>
-  <nav>
-    <a href="index.html">Portal home</a>
-    <a href="admin.html">🛠 Back-end preview</a>
-    <a href="plan.html">📋 Stakeholder plan</a>
-  </nav>
-</div>
-<header class="site-head">
-  <a class="logo" href="index.html"><img src="assets/cipc-logo-white.png" alt="City and Hackney Integrated Primary Care"></a>
-  <span class="login-status"><span class="dot"></span>You are logged in</span>
-  <button class="search-btn" type="button" aria-label="Search">⌕</button>
-  <nav class="site-nav">
-    <a href="index.html">HOME</a>
-    <span class="menu">
-      <a href="pathways.html">GENERAL PRACTICE ⌄</a>
-      <span class="dropdown"><span class="dd-panel">
-      <a href="pathways.html"><span class="ico-s">↝</span>Pathways</a>
-      <a href="services.html"><span class="ico-s">▦</span>Services</a>
-      <a href="topics.html"><span class="ico-s">◧</span>Topics</a>
-      </span></span>
-    </span>
-    <span class="menu">
-      <a href="bulletins.html" class="active"><span class="lock">🔒</span> IPC ⌄</a>
-      <span class="dropdown"><span class="dd-panel">
-      <a href="bulletins.html"><span class="ico-s">▤</span>Bulletins <span class="lock">🔒</span></a>
-      <a href="contracts.html" class="active"><span class="ico-s">✎</span>Contracts <span class="lock">🔒</span></a>
-      <a href="documents.html"><span class="ico-s">▣</span>Documents <span class="lock">🔒</span></a>
-      <a href="policies.html"><span class="ico-s">✓</span>Policies <span class="lock">🔒</span></a>
-      <a href="staff-bank.html"><span class="ico-s">☺</span>Staff Bank <span class="lock">🔒</span></a>
-      </span></span>
-    </span>
-    <a href="saved.html"><span class="lock" style="opacity:1;">☆</span> SAVED</a>
-  </nav>
-</header>
-<section class="hero-sub">
-  <div class="crumb"><a href="index.html">Portal</a> / <a href="contracts.html">Contracts</a> / <span class="here">Duty Doctor</span></div>
-  <div class="hero-sub-row">
-    <div>
-      <h1 data-edit><span class="lock">🔒</span> Duty Doctor</h1>
-      <div class="meta" data-edit>8 resources · Contract lead: ansley.magwaza@nhs.net</div>
-    </div>
-    <div class="searchbar" role="search"><span class="icon">⌕</span><input type="search" placeholder="Search within Duty Doctor…"></div>
-  </div>
-</section>
-<main class="wrap">
-  <section class="section layout-side">
-    <div>
-      <div class="filterbar">
-        <button class="filter active" type="button">All types</button>
-        <button class="filter" type="button">DOCX</button>
-        <button class="filter" type="button">PDF</button>
-        <button class="filter" type="button">PPTX</button>
-        <span class="sort">Sort: <b>Newest first</b></span>
-      </div>
-      <div class="doc-list">
-        <a class="doc-card" href="document.html">
-      <span class="badge ">PPTX</span>
-      <span class="body"><h3 data-edit> 2026/27 Duty Doctor Bitesize Training Slides</h3><div class="meta" data-edit>Updated Apr 2026 · 4.2 MB</div></span>
-      <span class="view">View ↗</span>
-    </a>
-        <a class="doc-card" href="document.html">
-      <span class="badge docx">DOCX</span>
-      <span class="body"><h3 data-edit> 2026/27 Duty Doctor Service Specification — Final</h3><div class="meta" data-edit>Updated Mar 2026 · 310 KB</div></span>
-      <span class="view">View ↗</span>
-    </a>
-        <a class="doc-card" href="document.html">
-      <span class="badge pdf">PDF</span>
-      <span class="body"><h3 data-edit> Duty Doctor Service — website &amp; leaflet 25/26</h3><div class="meta" data-edit>Updated Feb 2026 · 685 KB</div></span>
-      <span class="view">View ↗</span>
-    </a>
-        <a class="doc-card" href="document.html">
-      <span class="badge docx">DOCX</span>
-      <span class="body"><h3 data-edit> IPC Duty Doctor A&amp;E Support Pack 2026/27</h3><div class="meta" data-edit>Updated Apr 2026 · 1.1 MB</div></span>
-      <span class="view">View ↗</span>
-    </a>
-        <a class="doc-card" href="document.html">
-      <span class="badge docx">DOCX</span>
-      <span class="body"><h3 data-edit> Protected Learning Time (PLT) Guide</h3><div class="meta" data-edit>Updated Jan 2026 · 240 KB</div></span>
-      <span class="view">View ↗</span>
-    </a>
+<body data-nav="ipc:contracts">
+<div id="site-chrome"></div>
+
+<main>
+  <section class="hero hero-compact">
+    <div class="container">
+      <div class="breadcrumb"><a href="home.html">Home</a> / IPC / <a href="contracts.html">Contracts</a> / <span class="current">Duty Doctor</span></div>
+      <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap;">
+        <div>
+          <h1 data-editable>Duty Doctor &#128274;</h1>
+          <p class="hero-sub" data-editable>8 resources · Contract lead: ansley.magwaza@nhs.net</p>
+        </div>
+        <div class="search-box" style="margin-top:0; width:340px;">
+          <span class="icon">&#8981;</span>
+          <input type="search" placeholder="Search within Duty Doctor…" aria-label="Search within Duty Doctor">
+        </div>
       </div>
     </div>
-    <aside class="rail">
-      <img class="rail-photo" src="assets/photo-duty-doctor.jpg" alt="Duty Doctor consultation">
-      <div class="card">
-        <h3>About this service</h3>
-        <p data-edit>Same-day access for urgent medical problems, available in all City &amp; Hackney GP practices, 8am–6.30pm Mon–Fri.</p>
+  </section>
+
+  <section class="section">
+    <div class="container with-rail">
+      <div>
+        <div class="filter-bar">
+          <button class="filter-pill is-active">All types</button>
+          <button class="filter-pill">DOCX</button>
+          <button class="filter-pill">PDF</button>
+          <button class="filter-pill">PPTX</button>
+          <span class="sort">Sort: <b>Newest first</b></span>
+        </div>
+
+        <div class="result-list">
+          <a class="result-card" href="document.html">
+            <span class="badge badge-green">PPTX</span>
+            <div class="result-body">
+              <h3>2026/27 Duty Doctor Bitesize Training Slides</h3>
+              <div class="result-meta">Updated Apr 2026 · 4.2 MB</div>
+            </div>
+            <button class="star" title="Save">&#9734;</button>
+            <span class="result-action">View &rsaquo;</span>
+          </a>
+          <a class="result-card" href="document.html">
+            <span class="badge badge-blue">DOCX</span>
+            <div class="result-body">
+              <h3>2026/27 Duty Doctor Service Specification — Final</h3>
+              <div class="result-meta">Updated Mar 2026 · 310 KB</div>
+            </div>
+            <button class="star is-saved" title="Saved">&#9733;</button>
+            <span class="result-action">View &rsaquo;</span>
+          </a>
+          <a class="result-card" href="document.html">
+            <span class="badge badge-gold">PDF</span>
+            <div class="result-body">
+              <h3>Duty Doctor Service — website &amp; leaflet 25/26</h3>
+              <div class="result-meta">Updated Feb 2026 · 685 KB</div>
+            </div>
+            <button class="star" title="Save">&#9734;</button>
+            <span class="result-action">View &rsaquo;</span>
+          </a>
+          <a class="result-card" href="document.html">
+            <span class="badge badge-blue">DOCX</span>
+            <div class="result-body">
+              <h3>IPC Duty Doctor A&amp;E Support Pack 2026/27</h3>
+              <div class="result-meta">Updated Apr 2026 · 1.1 MB</div>
+            </div>
+            <button class="star" title="Save">&#9734;</button>
+            <span class="result-action">View &rsaquo;</span>
+          </a>
+          <a class="result-card" href="document.html">
+            <span class="badge badge-blue">DOCX</span>
+            <div class="result-body">
+              <h3>Protected Learning Time (PLT) Guide</h3>
+              <div class="result-meta">Updated Jan 2026 · 240 KB</div>
+            </div>
+            <button class="star" title="Save">&#9734;</button>
+            <span class="result-action">View &rsaquo;</span>
+          </a>
+        </div>
       </div>
-      <div class="card solid">
-        <h3>Contract lead</h3>
-        <p data-edit>Ansley Magwaza<br>ansley.magwaza@nhs.net</p>
-        <a class="link" href="mailto:ansley.magwaza@nhs.net">Email the lead →</a>
+
+      <div class="rail">
+        <img class="rail-photo" src="assets/photo-duty-doctor.jpg" alt="Duty Doctor consultation">
+        <div class="panel">
+          <h3>About this service</h3>
+          <p data-editable>Same-day access for urgent medical problems, available in all City &amp; Hackney GP practices, 8am–6.30pm Mon–Fri.</p>
+        </div>
+        <div class="rail-cta">
+          <h3>Contract lead</h3>
+          <p data-editable>Ansley Magwaza<br>ansley.magwaza@nhs.net</p>
+          <a href="mailto:ansley.magwaza@nhs.net">Email the lead &rarr;</a>
+        </div>
+        <div class="panel">
+          <h3>Upcoming training</h3>
+          <div class="event-row" style="border-bottom:0;">
+            <div class="event-date"><div class="m">JUL</div><div class="d">22</div></div>
+            <div><h4>Duty Doctor bitesize training</h4><p>12:30 – 13:30 · Online</p></div>
+          </div>
+        </div>
       </div>
-    </aside>
+    </div>
   </section>
 </main>
-<footer class="site-foot">
-  <span>© 2026 City &amp; Hackney Integrated Primary Care</span>
-  <span><a href="#">Privacy</a> · <a href="#">Accessibility</a> · <a href="#">Terms</a></span>
-</footer>
-<script src="assets/edit.js"></script>
+
+<div id="site-footer"></div>
+<script src="js/portal.js"></script>
 </body>
 </html>

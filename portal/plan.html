@@ -3,111 +3,67 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rebuild Plan — City &amp; Hackney IPC Members Portal</title>
+<title>The plan — City &amp; Hackney IPC Portal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/portal.css">
-<style>
-  .plan-wrap { max-width: 880px; margin: 0 auto; padding: 40px 24px 80px; }
-  .plan-wrap h1 { font-family: var(--font-head); font-size: 30px; color: var(--ink-head); line-height: 1.2; }
-  .plan-wrap .lede { font-size: 16px; color: var(--ink-soft); margin-top: 8px; }
-  .plan-wrap h2 { font-family: var(--font-head); font-size: 19px; color: var(--ipc-green); margin: 34px 0 10px; padding-bottom: 6px; border-bottom: 2px solid var(--ipc-teal); }
-  .plan-wrap p, .plan-wrap li { font-size: 14.5px; color: var(--ink); line-height: 1.65; }
-  .plan-wrap ul, .plan-wrap ol { padding-left: 22px; margin-top: 6px; }
-  .plan-wrap li { margin-bottom: 5px; }
-  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  @media (max-width: 700px) { .cols { grid-template-columns: 1fr; } }
-  .box { background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 16px 20px; }
-  .box h3 { font-family: var(--font-head); font-size: 14.5px; color: var(--ink-head); margin-bottom: 6px; }
-  .keep { border-left: 4px solid var(--ipc-gold); }
-  .change { border-left: 4px solid var(--ipc-green); }
-  .steps { counter-reset: step; list-style: none; padding-left: 0; }
-  .steps li { counter-increment: step; display: flex; gap: 14px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--line-soft); margin: 0; }
-  .steps li::before { content: counter(step); flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--ipc-green); color: #fff; font-family: var(--font-head); font-weight: 700; font-size: 13px; display: grid; place-items: center; }
-  .steps .now::before { background: var(--ipc-gold); }
-  .sitemap { font-size: 13.5px; line-height: 2; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 18px 22px; }
-  .sitemap a { font-weight: 600; }
-  .sitemap .lvl2 { padding-left: 26px; }
-  .sitemap .note { color: var(--grey); font-size: 12.5px; }
-  .approve { background: var(--ipc-green); color: #fff; border-radius: 12px; padding: 22px 26px; margin-top: 36px; }
-  .approve h2 { color: #fff; border: 0; margin: 0 0 6px; }
-  .approve p { color: #DCE9DF; }
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/portal.css">
 </head>
-<body>
-<div class="proto-strip">
-  <span class="tag">⚠ DEMO SITE</span>
-  <span>This is a design demo only — all pages, links and content are illustrative and are not the real IPC pages.</span>
-  <nav><a href="index.html">← Back to the prototype</a></nav>
-</div>
+<body data-chrome="banner">
+<div id="site-chrome"></div>
 
-<div class="plan-wrap">
-  <h1>City &amp; Hackney IPC Portal — rebuild plan on a page</h1>
-  <p class="lede">A new model: the GP section and the IPC area consolidate into one portal. What we're changing, what stays the same, and how we get from this prototype to the live site — for sign-off.</p>
+<main class="plan-page">
+  <h1>One portal for City &amp; Hackney primary care</h1>
+  <p class="lede">The GP clinical site and the IPC members area become one site: one login, one search, one WordPress back end. Access is controlled per item, not per area — member content simply carries a &#128274; wherever it appears.</p>
 
-  <h2>The goal — a new model</h2>
-  <p><b>The separate IPC area goes away.</b> The GP section and the IPC portal consolidate into <b>one portal</b> — one site, one navigation, one login, one search, one back end — in the approved design (<b>Design 1 — The IPC Hub</b>). Access is controlled <b>per item, not per area</b>: anything for member practices simply carries a <b>padlock 🔒</b> wherever it appears. Every page is <b>editable by IPC admins directly on the page</b> — no developer needed for day-to-day content changes.</p>
-
-  <h2>What changes / what stays</h2>
-  <div class="cols">
-    <div class="box change">
-      <h3>Changes</h3>
-      <ul>
-        <li><b>The IPC area disappears as a place.</b> One consolidated portal — the familiar <b>IPC / General Practice</b> split survives only as two menu groups in the header, purely for wayfinding. Pages, search, the document library and the back end are all shared.</li>
-        <li><b>Access is per item, not per area</b> — anything for member practices carries a 🔒 everywhere it appears (navigation, search results, listings). Members see everything seamlessly; anyone else is asked to sign in only when they open a locked item.</li>
-        <li><b>The IPC section rebuilt in the new format</b> — Documents, Contracts, Policies, Bulletins and Staff Bank all get the design pattern created for the GP section: search-first libraries, type filters, popular / recently-updated panels, and <a href="document.html">document pages with in-browser preview</a>.</li>
-        <li><b>Front-end editing</b> — admins toggle "edit" on any page and change text in place (try the <i>✎ Admin: edit this page</i> button on the prototype).</li>
-        <li><b>One consolidated back end</b> — a single admin area for the whole portal; a tick-box marks any page or document as member-only and the padlock appears automatically.</li>
+  <div class="plan-section plan-cols">
+    <div>
+      <h2>What changes</h2>
+      <ul class="plan-list">
+        <li>Two sites and two back ends become <b>one portal, one back end</b></li>
+        <li><b>One search</b> across pathways, services, documents, contracts and policies</li>
+        <li>Member content marked <b>&#128274; per item</b> — no separate "members area" to navigate</li>
+        <li>Document library rebuilt: in-browser viewing, owners, versions, review dates</li>
+        <li>Editors can make <b>quick edits from the page itself</b>, not just the back end</li>
       </ul>
     </div>
-    <div class="box keep">
-      <h3>Stays the same</h3>
-      <ul>
-        <li><b>Bulletins do not change</b> — content, format and the weekly publishing workflow stay exactly as they are today; only the portal navigation around them is new.</li>
-        <li><b>All existing content</b> — documents, contracts, policies migrate over; nothing is lost.</li>
-        <li><b>Logins</b> — members keep their existing accounts; open clinical content needs no login at all.</li>
-        <li><b>The approved GP-section design</b> — the whole hub now uses it.</li>
+    <div>
+      <h2>What stays the same</h2>
+      <ul class="plan-list stays">
+        <li>The bulletin — content and weekly workflow untouched, only new chrome around it</li>
+        <li>All existing content — migrated, not rewritten</li>
+        <li>Member logins — same accounts, used in one place instead of two</li>
+        <li>Who owns what — contract leads and policy owners carry over</li>
       </ul>
     </div>
   </div>
 
-  <h2>One flat portal — every page (all clickable in this prototype)</h2>
-  <div class="sitemap">
-    <div>🏠 <a href="index.html">Portal home</a> <span class="note">— one search and one front door for everything below</span></div>
-    <div class="lvl2">↝ <a href="pathways.html">Pathways</a> · <a href="services.html">Services</a> · <a href="topics.html">Topics</a> <span class="note">— clinical content, open to all practice staff</span></div>
-    <div class="lvl2">▤ <a href="bulletins.html">🔒 Bulletins</a> <span class="note">— as-is content, refreshed chrome</span></div>
-    <div class="lvl2">✎ <a href="contracts.html">🔒 Contracts</a> → <a href="contract-duty-doctor.html">contract page (e.g. Duty Doctor)</a> <span class="note">— resources, lead, about</span></div>
-    <div class="lvl2">▣ <a href="documents.html">🔒 Documents</a> → <a href="document.html">document page with preview</a> <span class="note">— the IPC library in the new format</span></div>
-    <div class="lvl2">✓ <a href="policies.html">🔒 Policies</a> <span class="note">— owners, versions, review dates</span></div>
-    <div class="lvl2">☺ <a href="staff-bank.html">🔒 Staff Bank</a> <span class="note">— find work / find staff</span></div>
-    <div class="lvl2">☆ <a href="saved.html">Saved items</a> <span class="note">— personal favourites from anywhere on the portal, searchable</span></div>
-    <div class="note" style="margin-top:8px;">In the header these group into two menus — <b>General Practice</b> (Pathways · Services · Topics) and <b>🔒 IPC</b> (Bulletins · Contracts · Documents · Policies · Staff Bank) — but that structure exists only in the menu; everything else is one consolidated portal with one search and one back end.</div>
+  <div class="plan-section">
+    <h2>How editing works</h2>
+    <ul class="plan-list">
+      <li><b>One WordPress admin</b> with a single content menu for the whole portal</li>
+      <li>A <b>"Members only" checkbox</b> on any item adds the &#128274; automatically everywhere it appears and gates access</li>
+      <li>Roles decide who edits what: clinical editors handle GP content, contract leads their own contract, IPC editors everything</li>
+      <li>Policy pages carry version, owner and review date — the dashboard flags reviews due</li>
+    </ul>
   </div>
 
-  <h2>How the merged back end will work (WordPress)</h2>
-  <p style="margin-bottom:10px;"><b><a href="admin.html">→ See the back-end preview</a></b> — a mock of the consolidated WordPress dashboard, including the members-only tick-box and the roles model.</p>
-  <ul>
-    <li><b>One WordPress install</b> for the whole hub — no more separate GP-section and portal back ends to keep in sync.</li>
-    <li>The site is rebuilt as a <b>WordPress theme</b> matching this prototype exactly — each block here maps to an editable block in WordPress.</li>
-    <li><b>Admins edit the front page (and every page) in place</b>; editors see the page exactly as members do.</li>
-    <li>Pathways, services, documents, contracts and policies become <b>structured content types</b> — upload a file, pick the topic/contract, tick "members only" if it is, and every listing, search result, padlock and "recently updated" panel updates itself.</li>
-    <li>One <b>consolidated IPC dashboard</b>: bulletins, documents, contracts, policies, pathways, events and news in a single menu, with clear roles for who can edit what (clinical editors, contracts team, comms, admins).</li>
-  </ul>
-
-  <h2>Getting to live</h2>
-  <ol class="steps">
-    <li class="now"><span><b>Now — review this prototype.</b> Click through every page, try the admin edit button, and confirm the design and structure.</span></li>
-    <li><span><b>Sign-off.</b> Stakeholders approve the design and the plan on this page.</span></li>
-    <li><span><b>Build on staging.</b> WordPress theme + content types built to match the prototype on a private staging server; existing content migrated across.</span></li>
-    <li><span><b>Test.</b> Admins test editing; a small member group tests finding documents. Fixes applied on staging.</span></li>
-    <li><span><b>Go live.</b> Staging is pushed to the live server in one switchover; the old site is kept as a rollback for 30 days.</span></li>
-  </ol>
-
-  <div class="approve">
-    <h2>The ask</h2>
-    <p>Approve the design and this plan so the staging build can start. Feedback on any page of the prototype is welcome before sign-off — everything you see is still easy to change.</p>
+  <div class="plan-section">
+    <h2>Rollout</h2>
+    <div class="steps">
+      <div class="step"><div><h4>Build on staging</h4><p>New portal built alongside the live sites — nothing changes for users while we build.</p></div></div>
+      <div class="step"><div><h4>Migrate &amp; tag content</h4><p>Existing pages and documents moved across; IPC items tagged members-only so the &#128274; appears automatically.</p></div></div>
+      <div class="step"><div><h4>Member practice preview</h4><p>A small group of practices tests search, the document library and logins on staging; feedback folded in.</p></div></div>
+      <div class="step"><div><h4>Switch over</h4><p>Old addresses redirect to the portal. Both old sites stay frozen and readable for a safety period, then retire.</p></div></div>
+    </div>
   </div>
-</div>
+
+  <div class="plan-section" style="display:flex; gap:10px;">
+    <a class="btn btn-green" href="home.html">See the portal &rsaquo;</a>
+    <a class="btn btn-ghost" href="admin.html">See the back end &rsaquo;</a>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+<script src="js/portal.js"></script>
 </body>
 </html>

@@ -3,105 +3,115 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Duty Doctor Service Specification — City &amp; Hackney IPC Hub</title>
+<title>Duty Doctor Service Specification — City &amp; Hackney IPC Portal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/portal.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/portal.css">
 </head>
-<body>
-<div class="proto-strip">
-  <span class="tag">⚠ DEMO SITE</span>
-  <span>This is a design demo only — all pages, links and content are illustrative and are not the real IPC pages.</span>
-  <nav>
-    <a href="index.html">Portal home</a>
-    <a href="admin.html">🛠 Back-end preview</a>
-    <a href="plan.html">📋 Stakeholder plan</a>
-  </nav>
-</div>
-<header class="site-head">
-  <a class="logo" href="index.html"><img src="assets/cipc-logo-white.png" alt="City and Hackney Integrated Primary Care"></a>
-  <span class="login-status"><span class="dot"></span>You are logged in</span>
-  <button class="search-btn" type="button" aria-label="Search">⌕</button>
-  <nav class="site-nav">
-    <a href="index.html">HOME</a>
-    <span class="menu">
-      <a href="pathways.html">GENERAL PRACTICE ⌄</a>
-      <span class="dropdown"><span class="dd-panel">
-      <a href="pathways.html"><span class="ico-s">↝</span>Pathways</a>
-      <a href="services.html"><span class="ico-s">▦</span>Services</a>
-      <a href="topics.html"><span class="ico-s">◧</span>Topics</a>
-      </span></span>
-    </span>
-    <span class="menu">
-      <a href="bulletins.html" class="active"><span class="lock">🔒</span> IPC ⌄</a>
-      <span class="dropdown"><span class="dd-panel">
-      <a href="bulletins.html"><span class="ico-s">▤</span>Bulletins <span class="lock">🔒</span></a>
-      <a href="contracts.html"><span class="ico-s">✎</span>Contracts <span class="lock">🔒</span></a>
-      <a href="documents.html" class="active"><span class="ico-s">▣</span>Documents <span class="lock">🔒</span></a>
-      <a href="policies.html"><span class="ico-s">✓</span>Policies <span class="lock">🔒</span></a>
-      <a href="staff-bank.html"><span class="ico-s">☺</span>Staff Bank <span class="lock">🔒</span></a>
-      </span></span>
-    </span>
-    <a href="saved.html"><span class="lock" style="opacity:1;">☆</span> SAVED</a>
-  </nav>
-</header>
-<section class="hero-sub">
-  <div class="crumb"><a href="index.html">Portal</a> / <a href="documents.html">Documents</a> / <span class="here">Duty Doctor Service Specification</span></div>
-  <div class="hero-sub-row">
-    <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap;">
-      <h1 data-edit><span class="lock">🔒</span> 2026/27 Duty Doctor Service Specification</h1>
-      <button class="save-pill" type="button">☆ Save</button>
+<body data-nav="ipc:documents">
+<div id="site-chrome"></div>
+
+<main>
+  <section class="hero hero-compact">
+    <div class="container">
+      <div class="breadcrumb"><a href="home.html">Home</a> / IPC / <a href="documents.html">Documents</a> / <span class="current">Duty Doctor Service Specification</span></div>
+      <h1 data-editable>2026/27 Duty Doctor Service Specification &#128274;</h1>
+      <p class="hero-sub">Final · Updated March 2026 · DOCX, 310 KB</p>
     </div>
-  </div>
-</section>
-<main class="wrap">
-  <section class="section layout-side">
-    <div class="viewer">
-      <div class="viewer-bar">
-        <span>≡</span>
-        <span>Duty-Doctor-Service-Spec-2026-27.pdf</span>
-        <span class="spacer">1 / 12</span>
-        <span>−</span><span class="zoom">90%</span><span>+</span>
-        <span>⤓</span><span>⎙</span>
-      </div>
-      <div class="viewer-canvas">
-        <div class="viewer-page">
-          <div class="doc-org">City &amp; Hackney IPC</div>
-          <div class="doc-title">Duty Doctor Service Specification 2026/27</div>
-          <div class="skeleton"><i style="width:100%"></i><i style="width:100%"></i><i style="width:92%"></i><i style="width:100%"></i><i style="width:64%"></i></div>
-          <div class="skeleton light"><i style="width:100%"></i><i style="width:96%"></i><i style="width:88%"></i></div>
-          <div style="margin-top:20px; font-size:11.5px; color:#3f4a43; line-height:2;">
-            •&nbsp; Same-day urgent access, 8am–6.30pm Mon–Fri<br>
-            •&nbsp; All City &amp; Hackney GP practices<br>
-            •&nbsp; Reporting via IPC dashboard, quarterly<br>
-            •&nbsp; A&amp;E support pack — appendix C
+  </section>
+
+  <section class="section">
+    <div class="container with-rail">
+      <!-- In-browser viewer mock -->
+      <div>
+        <div class="pdf-viewer">
+          <div class="pdf-toolbar">
+            <span class="pdf-name">duty-doctor-service-spec-2026-27-final.pdf</span>
+            <button id="pg-prev" title="Previous page">&lsaquo;</button>
+            <span class="pageinfo"><span id="pg-cur">1</span> / 12</span>
+            <button id="pg-next" title="Next page">&rsaquo;</button>
+            <button id="zoom-out" title="Zoom out">&minus;</button>
+            <span id="zoom-val">100%</span>
+            <button id="zoom-in" title="Zoom in">+</button>
+            <button class="dl" title="Download">&#8595; Download</button>
           </div>
-          <div class="skeleton light" style="margin-top:18px;"><i style="width:100%"></i><i style="width:90%"></i><i style="width:97%"></i><i style="width:72%"></i></div>
+          <div class="pdf-canvas" id="pdf-canvas">
+            <div class="pdf-page">
+              <div class="ph-head"></div>
+              <div class="ph-line w80"></div><div class="ph-line"></div><div class="ph-line w60"></div>
+              <div class="ph-gap"></div>
+              <div class="ph-line"></div><div class="ph-line w80"></div><div class="ph-line"></div><div class="ph-line w40"></div>
+              <div class="ph-gap"></div>
+              <div class="ph-line w60"></div><div class="ph-line"></div><div class="ph-line w80"></div>
+            </div>
+            <div class="pdf-page">
+              <div class="ph-line w60"></div><div class="ph-line"></div><div class="ph-line"></div><div class="ph-line w80"></div>
+              <div class="ph-gap"></div>
+              <div class="ph-line"></div><div class="ph-line w40"></div>
+              <div class="ph-gap"></div>
+              <div class="ph-line w80"></div><div class="ph-line"></div><div class="ph-line w60"></div><div class="ph-line"></div>
+            </div>
+          </div>
+        </div>
+        <p style="font-size:12.5px; color:#8a948d; margin-top:8px;">Viewer mock — the real portal opens documents in the browser with download as a fallback, so staff stop emailing stale copies around.</p>
+      </div>
+
+      <!-- Details rail -->
+      <div class="rail">
+        <div class="panel">
+          <h3>Details</h3>
+          <dl class="meta-table">
+            <div class="meta-row"><dt>Access</dt><dd>&#128274; Member practices</dd></div>
+            <div class="meta-row"><dt>Type</dt><dd>Service specification</dd></div>
+            <div class="meta-row"><dt>Contract</dt><dd><a href="contract-duty-doctor.html">Duty Doctor</a></dd></div>
+            <div class="meta-row"><dt>Owner</dt><dd>Ansley Magwaza</dd></div>
+            <div class="meta-row"><dt>Updated</dt><dd>14 Mar 2026</dd></div>
+            <div class="meta-row"><dt>Version</dt><dd>2.1 (Final)</dd></div>
+          </dl>
+          <div style="display:flex; gap:8px; margin-top:14px;">
+            <a class="btn btn-green" href="#" style="flex:1; text-align:center;">&#8595; Download</a>
+            <button class="btn btn-ghost" title="Save to your items">&#9734; Save</button>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Topics</h3>
+          <div class="chip-row" style="margin-top:10px;">
+            <a class="chip-solid" href="contract-duty-doctor.html">Duty Doctor</a>
+            <a class="chip-solid" href="topics.html">Urgent care</a>
+            <a class="chip-solid" href="contracts.html">Contracts 2026-27</a>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Related documents</h3>
+          <div class="list-rows">
+            <a class="list-row" href="#"><span class="badge badge-green">PPTX</span><span class="row-title">Bitesize training slides</span></a>
+            <a class="list-row" href="#"><span class="badge badge-gold">PDF</span><span class="row-title">Website &amp; leaflet 25/26</span></a>
+            <a class="list-row" href="#"><span class="badge badge-blue">DOCX</span><span class="row-title">A&amp;E support pack 2026/27</span></a>
+          </div>
         </div>
       </div>
     </div>
-    <aside class="rail">
-      <a class="btn-download" href="#">⤓ Download PDF (310 KB)</a>
-      <div class="card">
-        <h3 class="rail-title-rule">Details</h3>
-        <p data-edit><b>Access:</b> <span class="lock">🔒</span> IPC members<br><b>Author:</b> IPC Contracts Team<br><b>Size:</b> 310 KB<br><b>Updated:</b> Mar 2026<br><b>Review date:</b> 31 Mar 2027</p>
-      </div>
-      <div class="card">
-        <h3 class="rail-title-rule">Topics</h3>
-        <div class="tags"><span class="tag-pill green">Duty Doctor</span><span class="tag-pill green">Contracts</span><span class="tag-pill">Urgent care</span></div>
-      </div>
-      <div class="card solid-blue">
-        <h3>Related documents</h3>
-        <p data-edit><span class="lock">🔒</span> Duty Doctor A&amp;E Support Pack ›<br><span class="lock">🔒</span> Bitesize Training Slides 26/27 ›<br><span class="lock">🔒</span> PLT Guide ›</p>
-      </div>
-    </aside>
   </section>
 </main>
-<footer class="site-foot">
-  <span>© 2026 City &amp; Hackney Integrated Primary Care</span>
-  <span><a href="#">Privacy</a> · <a href="#">Accessibility</a> · <a href="#">Terms</a></span>
-</footer>
-<script src="assets/edit.js"></script>
+
+<div id="site-footer"></div>
+<script src="js/portal.js"></script>
+<script>
+/* PDF viewer mock controls */
+(function () {
+  var cur = 1, total = 12, zoom = 100;
+  var curEl = document.getElementById('pg-cur');
+  var zoomEl = document.getElementById('zoom-val');
+  var canvas = document.getElementById('pdf-canvas');
+  document.getElementById('pg-prev').addEventListener('click', function () { if (cur > 1) cur--; curEl.textContent = cur; });
+  document.getElementById('pg-next').addEventListener('click', function () { if (cur < total) cur++; curEl.textContent = cur; });
+  document.getElementById('zoom-in').addEventListener('click', function () { zoom = Math.min(160, zoom + 10); apply(); });
+  document.getElementById('zoom-out').addEventListener('click', function () { zoom = Math.max(60, zoom - 10); apply(); });
+  function apply() {
+    zoomEl.textContent = zoom + '%';
+    canvas.querySelectorAll('.pdf-page').forEach(function (p) { p.style.width = (480 * zoom / 100) + 'px'; });
+  }
+})();
+</script>
 </body>
 </html>

@@ -3,87 +3,83 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bulletins — City &amp; Hackney IPC Hub</title>
+<title>Bulletins 🔒 — City &amp; Hackney IPC Portal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/portal.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/portal.css">
 </head>
-<body>
-<div class="proto-strip">
-  <span class="tag">⚠ DEMO SITE</span>
-  <span>This is a design demo only — all pages, links and content are illustrative and are not the real IPC pages.</span>
-  <nav>
-    <a href="index.html">Portal home</a>
-    <a href="admin.html">🛠 Back-end preview</a>
-    <a href="plan.html">📋 Stakeholder plan</a>
-  </nav>
-</div>
-<header class="site-head">
-  <a class="logo" href="index.html"><img src="assets/cipc-logo-white.png" alt="City and Hackney Integrated Primary Care"></a>
-  <span class="login-status"><span class="dot"></span>You are logged in</span>
-  <button class="search-btn" type="button" aria-label="Search">⌕</button>
-  <nav class="site-nav">
-    <a href="index.html">HOME</a>
-    <span class="menu">
-      <a href="pathways.html">GENERAL PRACTICE ⌄</a>
-      <span class="dropdown"><span class="dd-panel">
-      <a href="pathways.html"><span class="ico-s">↝</span>Pathways</a>
-      <a href="services.html"><span class="ico-s">▦</span>Services</a>
-      <a href="topics.html"><span class="ico-s">◧</span>Topics</a>
-      </span></span>
-    </span>
-    <span class="menu">
-      <a href="bulletins.html" class="active"><span class="lock">🔒</span> IPC ⌄</a>
-      <span class="dropdown"><span class="dd-panel">
-      <a href="bulletins.html" class="active"><span class="ico-s">▤</span>Bulletins <span class="lock">🔒</span></a>
-      <a href="contracts.html"><span class="ico-s">✎</span>Contracts <span class="lock">🔒</span></a>
-      <a href="documents.html"><span class="ico-s">▣</span>Documents <span class="lock">🔒</span></a>
-      <a href="policies.html"><span class="ico-s">✓</span>Policies <span class="lock">🔒</span></a>
-      <a href="staff-bank.html"><span class="ico-s">☺</span>Staff Bank <span class="lock">🔒</span></a>
-      </span></span>
-    </span>
-    <a href="saved.html"><span class="lock" style="opacity:1;">☆</span> SAVED</a>
-  </nav>
-</header>
-<section class="hero-sub">
-  <div class="crumb"><a href="index.html">Portal</a> / <span class="here">Bulletins</span></div>
-  <div class="hero-sub-row">
-    <div>
-      <h1><span class="lock">🔒</span> Bulletins</h1>
-      <div class="meta">Weekly IPC bulletin — latest edition and full archive</div>
+<body data-nav="ipc:bulletins">
+<div id="site-chrome"></div>
+
+<main>
+  <section class="hero hero-compact">
+    <div class="container">
+      <div class="breadcrumb"><a href="home.html">Home</a> / IPC / <span class="current">Bulletins</span></div>
+      <h1 data-editable>&#128274; IPC bulletins</h1>
+      <p class="hero-sub" data-editable>The weekly IPC round-up for member practices — latest issue and full archive.</p>
     </div>
-    <div class="searchbar" role="search"><span class="icon">⌕</span><input type="search" placeholder="Search bulletins…"></div>
-  </div>
-</section>
-<main class="wrap">
-  <div class="notice"><b>This section does not change:</b> bulletins keep their current content, format and weekly publishing workflow exactly as they are today. Only the portal navigation around them is new.</div>
+  </section>
+
   <section class="section">
-    <div class="card" style="max-width:820px;">
-      <div class="card-head"><h2>Latest bulletin</h2></div>
-      <div class="rows">
-        <a class="row" href="#"><span class="badge pdf">PDF</span><span class="title">IPC Bulletin — w/c 7 July 2026</span><span class="meta">10 Jul 2026</span></a>
+    <div class="container">
+      <div class="notice">
+        <b>Nothing changes here.</b> The bulletin content and the way it is produced and sent stay exactly as they are today — only the page around it is new.
       </div>
-      <div class="card-head" style="margin-top:18px;"><h2>July 2026</h2></div>
-      <div class="rows">
-        <a class="row" href="#"><span class="badge pdf">PDF</span><span class="title">IPC Bulletin — w/c 30 June 2026</span><span class="meta">3 Jul 2026</span></a>
+
+      <div class="bulletin-month">July 2026</div>
+      <div class="result-list" style="margin-top:0;">
+        <a class="result-card" href="#">
+          <span class="badge badge-gold">PDF</span>
+          <div class="result-body">
+            <h3>IPC Bulletin — week of 7 July 2026</h3>
+            <div class="result-meta">Latest issue · Contracts 2026-27 · training dates · staff bank update</div>
+          </div>
+          <span class="result-action">Read &rsaquo;</span>
+        </a>
+        <a class="result-card" href="#">
+          <span class="badge badge-gold">PDF</span>
+          <div class="result-body">
+            <h3>IPC Bulletin — week of 30 June 2026</h3>
+            <div class="result-meta">Health checks targets · PLT reminder</div>
+          </div>
+          <span class="result-action">Read &rsaquo;</span>
+        </a>
       </div>
-      <div class="card-head" style="margin-top:18px;"><h2>June 2026</h2></div>
-      <div class="rows">
-        <a class="row" href="#"><span class="badge pdf">PDF</span><span class="title">IPC Bulletin — w/c 23 June 2026</span><span class="meta">26 Jun 2026</span></a>
-        <a class="row" href="#"><span class="badge pdf">PDF</span><span class="title">IPC Bulletin — w/c 16 June 2026</span><span class="meta">19 Jun 2026</span></a>
-        <a class="row" href="#"><span class="badge pdf">PDF</span><span class="title">IPC Bulletin — w/c 9 June 2026</span><span class="meta">12 Jun 2026</span></a>
-        <a class="row" href="#"><span class="badge pdf">PDF</span><span class="title">IPC Bulletin — w/c 2 June 2026</span><span class="meta">5 Jun 2026</span></a>
+
+      <div class="bulletin-month">June 2026</div>
+      <div class="result-list" style="margin-top:0;">
+        <a class="result-card" href="#">
+          <span class="badge badge-gold">PDF</span>
+          <div class="result-body">
+            <h3>IPC Bulletin — week of 23 June 2026</h3>
+            <div class="result-meta">Coaching &amp; mentoring offer · teledermatology update</div>
+          </div>
+          <span class="result-action">Read &rsaquo;</span>
+        </a>
+        <a class="result-card" href="#">
+          <span class="badge badge-gold">PDF</span>
+          <div class="result-body">
+            <h3>IPC Bulletin — week of 16 June 2026</h3>
+            <div class="result-meta">Duty doctor rota · safeguarding training</div>
+          </div>
+          <span class="result-action">Read &rsaquo;</span>
+        </a>
+        <a class="result-card" href="#">
+          <span class="badge badge-gold">PDF</span>
+          <div class="result-body">
+            <h3>IPC Bulletin — week of 9 June 2026</h3>
+            <div class="result-meta">Smoking cessation referrals · events round-up</div>
+          </div>
+          <span class="result-action">Read &rsaquo;</span>
+        </a>
       </div>
-      <div class="card-head" style="margin-top:18px;"><h2>Archive by year</h2></div>
-      <div class="tags"><a class="tag-pill green" href="#">2026</a><a class="tag-pill green" href="#">2025</a><a class="tag-pill green" href="#">2024</a><a class="tag-pill green" href="#">2023</a></div>
+
+      <p style="text-align:center; margin-top:22px;"><a class="btn btn-ghost" href="#">Browse the full archive</a></p>
     </div>
   </section>
 </main>
-<footer class="site-foot">
-  <span>© 2026 City &amp; Hackney Integrated Primary Care</span>
-  <span><a href="#">Privacy</a> · <a href="#">Accessibility</a> · <a href="#">Terms</a></span>
-</footer>
-<script src="assets/edit.js"></script>
+
+<div id="site-footer"></div>
+<script src="js/portal.js"></script>
 </body>
 </html>

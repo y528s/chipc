@@ -3,103 +3,65 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Staff Bank — City &amp; Hackney IPC Hub</title>
+<title>Staff Bank 🔒 — City &amp; Hackney IPC Portal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/portal.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/portal.css">
 </head>
-<body>
-<div class="proto-strip">
-  <span class="tag">⚠ DEMO SITE</span>
-  <span>This is a design demo only — all pages, links and content are illustrative and are not the real IPC pages.</span>
-  <nav>
-    <a href="index.html">Portal home</a>
-    <a href="admin.html">🛠 Back-end preview</a>
-    <a href="plan.html">📋 Stakeholder plan</a>
-  </nav>
-</div>
-<header class="site-head">
-  <a class="logo" href="index.html"><img src="assets/cipc-logo-white.png" alt="City and Hackney Integrated Primary Care"></a>
-  <span class="login-status"><span class="dot"></span>You are logged in</span>
-  <button class="search-btn" type="button" aria-label="Search">⌕</button>
-  <nav class="site-nav">
-    <a href="index.html">HOME</a>
-    <span class="menu">
-      <a href="pathways.html">GENERAL PRACTICE ⌄</a>
-      <span class="dropdown"><span class="dd-panel">
-      <a href="pathways.html"><span class="ico-s">↝</span>Pathways</a>
-      <a href="services.html"><span class="ico-s">▦</span>Services</a>
-      <a href="topics.html"><span class="ico-s">◧</span>Topics</a>
-      </span></span>
-    </span>
-    <span class="menu">
-      <a href="bulletins.html" class="active"><span class="lock">🔒</span> IPC ⌄</a>
-      <span class="dropdown"><span class="dd-panel">
-      <a href="bulletins.html"><span class="ico-s">▤</span>Bulletins <span class="lock">🔒</span></a>
-      <a href="contracts.html"><span class="ico-s">✎</span>Contracts <span class="lock">🔒</span></a>
-      <a href="documents.html"><span class="ico-s">▣</span>Documents <span class="lock">🔒</span></a>
-      <a href="policies.html"><span class="ico-s">✓</span>Policies <span class="lock">🔒</span></a>
-      <a href="staff-bank.html" class="active"><span class="ico-s">☺</span>Staff Bank <span class="lock">🔒</span></a>
-      </span></span>
-    </span>
-    <a href="saved.html"><span class="lock" style="opacity:1;">☆</span> SAVED</a>
-  </nav>
-</header>
-<section class="hero">
-  <div class="hero-grid">
-    <div>
-      <h1 data-edit><span class="lock">🔒</span> IPC Staff Bank</h1>
-      <div class="sub" data-edit>Flexible work for clinicians and staff across City &amp; Hackney practices — and a trusted pool for practices that need cover.</div>
-      <div class="chips" style="margin-top:22px;">
-        <a class="chip" href="#" style="background:#c68a00; border-color:#c68a00; font-size:14px; padding:12px 22px;">I'm looking for work →</a>
-        <a class="chip" href="#" style="font-size:14px; padding:12px 22px;">My practice needs staff →</a>
-      </div>
-    </div>
-    <img class="hero-photo" src="assets/photo-duty-doctor.jpg" alt="Clinician at work">
-  </div>
-</section>
-<main class="wrap">
-  <section class="section">
-    <h2 class="section-title" data-edit>How it works</h2>
-    <div class="tiles" style="grid-template-columns:repeat(3,1fr);">
-      <div class="tile"><span class="ico gold">1</span><h3>Register</h3><p data-edit>Join the bank with your role, availability and documents — approval usually takes 3 working days.</p></div>
-      <div class="tile"><span class="ico gold">2</span><h3>Match</h3><p data-edit>Practices post shifts; the bank matches by role, rate and availability and notifies you.</p></div>
-      <div class="tile"><span class="ico gold">3</span><h3>Work &amp; get paid</h3><p data-edit>Timesheets are approved in the portal and paid through the IPC payroll run.</p></div>
+<body data-nav="ipc:staffbank">
+<div id="site-chrome"></div>
+
+<main>
+  <section class="hero hero-compact">
+    <div class="container">
+      <div class="breadcrumb"><a href="home.html">Home</a> / IPC / <span class="current">Staff Bank</span></div>
+      <h1 data-editable>&#128274; IPC Staff Bank</h1>
+      <p class="hero-sub" data-editable>Flexible sessions across City &amp; Hackney member practices — find work, or find staff for your practice.</p>
     </div>
   </section>
-  <section class="section grid-2" style="padding-top:24px;">
-    <div class="card">
-      <div class="card-head"><h2>Current opportunities</h2><a class="view-all" href="#">View all ›</a></div>
-      <div class="rows">
-        <a class="row" href="#"><span class="badge ">GP</span><span class="title" data-edit>Duty Doctor sessions — Lower Clapton</span><span class="meta">Jul – Aug</span></a>
-        <a class="row" href="#"><span class="badge docx">HCA</span><span class="title" data-edit>Phlebotomy clinics — Shoreditch Park</span><span class="meta">Ongoing</span></a>
-        <a class="row" href="#"><span class="badge pdf">NURSE</span><span class="title" data-edit>Practice nurse cover — Well Street</span><span class="meta">Aug</span></a>
+
+  <section class="section">
+    <div class="container two-col">
+      <div class="panel">
+        <div class="tile-icon" style="background:var(--green-tint); color:var(--green);">&#9786;</div>
+        <h3 style="margin-top:12px;">I'm looking for work</h3>
+        <p style="font-size:13.5px; color:#6b756e; margin-top:6px;">Join the bank once, then pick up sessions at any member practice. GPs, nurses, pharmacists, HCAs and admin roles.</p>
+        <div style="display:flex; gap:8px; margin-top:16px;">
+          <a class="btn btn-green" href="#">Register with the bank</a>
+          <a class="btn btn-ghost" href="#">Browse open sessions</a>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-head"><h2>For practices</h2></div>
-      <div class="rows">
-        <a class="row" href="#"><span class="badge docx">DOCX</span><span class="title" data-edit>Staff Bank — practice onboarding guide</span><span class="meta">Apr 2026</span></a>
-        <a class="row" href="#"><span class="badge pdf">PDF</span><span class="title" data-edit>Rates card 2026/27</span><span class="meta">Apr 2026</span></a>
-        <a class="row" href="#"><span class="badge form">FORM</span><span class="title" data-edit>Post a shift (request form)</span><span class="meta">Online</span></a>
+      <div class="panel">
+        <div class="tile-icon icon-gold">&#9638;</div>
+        <h3 style="margin-top:12px;">My practice needs staff</h3>
+        <p style="font-size:13.5px; color:#6b756e; margin-top:6px;">Post a session and reach every registered bank member. Rates and paperwork are standardised across the IPC.</p>
+        <div style="display:flex; gap:8px; margin-top:16px;">
+          <a class="btn btn-gold" href="#">Post a session</a>
+          <a class="btn btn-ghost" href="#">How it works</a>
+        </div>
       </div>
     </div>
   </section>
+
   <section class="section">
-    <div class="contact-band">
-      <div class="body">
-        <h2 data-edit>Questions about the Staff Bank?</h2>
-        <p data-edit>The bank team can help with registration, rates and payroll.</p>
+    <div class="container">
+      <div class="panel">
+        <div class="panel-head">
+          <h3>Open sessions this week</h3>
+          <a class="view-all" href="#">All sessions &rsaquo;</a>
+        </div>
+        <div class="list-rows">
+          <a class="list-row" href="#"><span class="badge badge-green">GP</span><span class="row-title">Duty Doctor session — Lower Clapton Group Practice</span><span class="row-meta">Thu 16 Jul · AM</span></a>
+          <a class="list-row" href="#"><span class="badge badge-blue">NURSE</span><span class="row-title">Practice nurse — Shoreditch Park Surgery</span><span class="row-meta">Fri 17 Jul · Full day</span></a>
+          <a class="list-row" href="#"><span class="badge badge-purple">PHARM</span><span class="row-title">Clinical pharmacist — Well Street Surgery</span><span class="row-meta">Mon 20 Jul · PM</span></a>
+          <a class="list-row" href="#"><span class="badge badge-gold">ADMIN</span><span class="row-title">Reception cover — The Lawson Practice</span><span class="row-meta">Tue 21 Jul · AM</span></a>
+        </div>
       </div>
-      <a class="btn-gold" href="#">Contact the bank team</a>
     </div>
   </section>
 </main>
-<footer class="site-foot">
-  <span>© 2026 City &amp; Hackney Integrated Primary Care</span>
-  <span><a href="#">Privacy</a> · <a href="#">Accessibility</a> · <a href="#">Terms</a></span>
-</footer>
-<script src="assets/edit.js"></script>
+
+<div id="site-footer"></div>
+<script src="js/portal.js"></script>
 </body>
 </html>

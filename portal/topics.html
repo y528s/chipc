@@ -3,117 +3,50 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Topics — City &amp; Hackney IPC Hub</title>
+<title>Topics — City &amp; Hackney IPC Portal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/portal.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/portal.css">
 </head>
-<body>
-<div class="proto-strip">
-  <span class="tag">⚠ DEMO SITE</span>
-  <span>This is a design demo only — all pages, links and content are illustrative and are not the real IPC pages.</span>
-  <nav>
-    <a href="index.html">Portal home</a>
-    <a href="admin.html">🛠 Back-end preview</a>
-    <a href="plan.html">📋 Stakeholder plan</a>
-  </nav>
-</div>
-<header class="site-head">
-  <a class="logo" href="index.html"><img src="assets/cipc-logo-white.png" alt="City and Hackney Integrated Primary Care"></a>
-  <span class="login-status"><span class="dot"></span>You are logged in</span>
-  <button class="search-btn" type="button" aria-label="Search">⌕</button>
-  <nav class="site-nav">
-    <a href="index.html">HOME</a>
-    <span class="menu">
-      <a href="pathways.html" class="active">GENERAL PRACTICE ⌄</a>
-      <span class="dropdown"><span class="dd-panel">
-      <a href="pathways.html"><span class="ico-s">↝</span>Pathways</a>
-      <a href="services.html"><span class="ico-s">▦</span>Services</a>
-      <a href="topics.html" class="active"><span class="ico-s">◧</span>Topics</a>
-      </span></span>
-    </span>
-    <span class="menu">
-      <a href="bulletins.html"><span class="lock">🔒</span> IPC ⌄</a>
-      <span class="dropdown"><span class="dd-panel">
-      <a href="bulletins.html"><span class="ico-s">▤</span>Bulletins <span class="lock">🔒</span></a>
-      <a href="contracts.html"><span class="ico-s">✎</span>Contracts <span class="lock">🔒</span></a>
-      <a href="documents.html"><span class="ico-s">▣</span>Documents <span class="lock">🔒</span></a>
-      <a href="policies.html"><span class="ico-s">✓</span>Policies <span class="lock">🔒</span></a>
-      <a href="staff-bank.html"><span class="ico-s">☺</span>Staff Bank <span class="lock">🔒</span></a>
-      </span></span>
-    </span>
-    <a href="saved.html"><span class="lock" style="opacity:1;">☆</span> SAVED</a>
-  </nav>
-</header>
-<section class="hero-sub">
-  <div class="crumb"><a href="index.html">Portal</a> / <span class="here">Topics</span></div>
-  <div class="hero-sub-row">
-    <div>
-      <h1>Topics</h1>
-      <div class="meta" data-edit>Browse pathways, services and guidance by clinical area</div>
-    </div>
-    <div class="searchbar" role="search"><span class="icon">⌕</span><input type="search" placeholder="Search topics…"></div>
-  </div>
-</section>
-<main class="wrap">
-  <section class="section layout-side">
-    <div>
-      <div class="filterbar">
-        <button class="filter active" type="button">A – Z</button>
-        <button class="filter" type="button">Most used</button>
-        <span class="sort">Sort: <b>A – Z</b></span>
-      </div>
-      <div class="doc-list">
-        <a class="doc-card" href="document.html">
-      <span class="badge form">TOPIC</span>
-      <span class="body"><h3 data-edit> Cardiology</h3><div class="meta" data-edit>24 pathways · 6 services · 12 documents</div></span>
-      <span class="view">View ↗</span>
-    </a>
-        <a class="doc-card" href="document.html">
-      <span class="badge form">TOPIC</span>
-      <span class="body"><h3 data-edit> Dermatology</h3><div class="meta" data-edit>18 pathways · 3 services · 9 documents</div></span>
-      <span class="view">View ↗</span>
-    </a>
-        <a class="doc-card" href="document.html">
-      <span class="badge form">TOPIC</span>
-      <span class="body"><h3 data-edit> Diabetes &amp; endocrinology</h3><div class="meta" data-edit>21 pathways · 4 services · 15 documents</div></span>
-      <span class="view">View ↗</span>
-    </a>
-        <a class="doc-card" href="document.html">
-      <span class="badge form">TOPIC</span>
-      <span class="body"><h3 data-edit> Gastroenterology</h3><div class="meta" data-edit>26 pathways · 2 services · 8 documents</div></span>
-      <span class="view">View ↗</span>
-    </a>
-        <a class="doc-card" href="document.html">
-      <span class="badge form">TOPIC</span>
-      <span class="body"><h3 data-edit> Mental health</h3><div class="meta" data-edit>32 pathways · 8 services · 19 documents</div></span>
-      <span class="view">View ↗</span>
-    </a>
-        <a class="doc-card" href="document.html">
-      <span class="badge form">TOPIC</span>
-      <span class="body"><h3 data-edit> Respiratory</h3><div class="meta" data-edit>17 pathways · 3 services · 11 documents</div></span>
-      <span class="view">View ↗</span>
-    </a>
-        <a class="doc-card" href="document.html">
-      <span class="badge form">TOPIC</span>
-      <span class="body"><h3 data-edit> Women's health</h3><div class="meta" data-edit>23 pathways · 5 services · 10 documents</div></span>
-      <span class="view">View ↗</span>
-    </a>
+<body data-nav="gp:topics">
+<div id="site-chrome"></div>
+
+<main>
+  <section class="hero hero-compact">
+    <div class="container">
+      <div class="breadcrumb"><a href="home.html">Home</a> / General Practice / <span class="current">Topics</span></div>
+      <h1 data-editable>Browse by clinical topic</h1>
+      <p class="hero-sub" data-editable>Everything on a topic in one place — pathways, services, forms and any IPC items (marked &#128274;).</p>
+      <div class="search-box">
+        <span class="icon">&#8981;</span>
+        <input type="search" placeholder="Search topics…" aria-label="Search topics">
+        <button class="btn-search">Search</button>
       </div>
     </div>
-    <aside class="rail">
-      <div class="card">
-        <h3>How topics work</h3>
-        <p data-edit>A topic collects everything on the portal for one clinical area — pathways, services, forms and any members-only contract resources (marked 🔒).</p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="tile-row">
+        <a class="tile" href="#"><div class="tile-icon icon-blue">&#9829;</div><h3>Cardiology</h3><p>32 pathways · 4 services · &#128274; 2 contracts</p><div class="tile-arrow">&rsaquo;</div></a>
+        <a class="tile" href="#"><div class="tile-icon icon-blue">&#9679;</div><h3>Diabetes</h3><p>18 pathways · 3 services · &#128274; 1 contract</p><div class="tile-arrow">&rsaquo;</div></a>
+        <a class="tile" href="#"><div class="tile-icon icon-purple">&#9678;</div><h3>Mental Health</h3><p>41 pathways · 7 services · &#128274; 2 contracts</p><div class="tile-arrow">&rsaquo;</div></a>
+        <a class="tile" href="#"><div class="tile-icon icon-purple">&#9792;</div><h3>Women's Health</h3><p>27 pathways · 5 services</p><div class="tile-arrow">&rsaquo;</div></a>
+        <a class="tile" href="#"><div class="tile-icon icon-blue">&#9673;</div><h3>Respiratory</h3><p>22 pathways · 2 services</p><div class="tile-arrow">&rsaquo;</div></a>
+        <a class="tile" href="#"><div class="tile-icon icon-blue">&#9632;</div><h3>Dermatology</h3><p>19 pathways · 1 service · &#128274; 1 guidance</p><div class="tile-arrow">&rsaquo;</div></a>
+        <a class="tile" href="#"><div class="tile-icon icon-purple">&#9825;</div><h3>Children &amp; Young People</h3><p>35 pathways · 6 services</p><div class="tile-arrow">&rsaquo;</div></a>
+        <a class="tile" href="#"><div class="tile-icon icon-blue">&#9650;</div><h3>Older People</h3><p>24 pathways · 5 services · &#128274; 1 contract</p><div class="tile-arrow">&rsaquo;</div></a>
+        <a class="tile" href="#"><div class="tile-icon icon-blue">&#9670;</div><h3>Gastroenterology</h3><p>21 pathways · 2 services</p><div class="tile-arrow">&rsaquo;</div></a>
+        <a class="tile" href="#"><div class="tile-icon icon-purple">&#9733;</div><h3>End of Life Care</h3><p>9 pathways · 3 services · &#128274; 1 contract</p><div class="tile-arrow">&rsaquo;</div></a>
+        <a class="tile" href="#"><div class="tile-icon icon-blue">&#9645;</div><h3>Musculoskeletal</h3><p>26 pathways · 4 services</p><div class="tile-arrow">&rsaquo;</div></a>
+        <a class="tile" href="#"><div class="tile-icon icon-purple">&#9647;</div><h3>Sexual Health</h3><p>14 pathways · 3 services · &#128274; 1 contract</p><div class="tile-arrow">&rsaquo;</div></a>
       </div>
-    </aside>
+      <p style="text-align:center; margin-top:24px;"><a class="btn btn-ghost" href="#">Show all 23 topics</a></p>
+    </div>
   </section>
 </main>
-<footer class="site-foot">
-  <span>© 2026 City &amp; Hackney Integrated Primary Care</span>
-  <span><a href="#">Privacy</a> · <a href="#">Accessibility</a> · <a href="#">Terms</a></span>
-</footer>
-<script src="assets/edit.js"></script>
+
+<div id="site-footer"></div>
+<script src="js/portal.js"></script>
 </body>
 </html>

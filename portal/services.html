@@ -3,114 +3,101 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Services — City &amp; Hackney IPC Hub</title>
+<title>Services — City &amp; Hackney IPC Portal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/portal.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/portal.css">
 </head>
-<body>
-<div class="proto-strip">
-  <span class="tag">⚠ DEMO SITE</span>
-  <span>This is a design demo only — all pages, links and content are illustrative and are not the real IPC pages.</span>
-  <nav>
-    <a href="index.html">Portal home</a>
-    <a href="admin.html">🛠 Back-end preview</a>
-    <a href="plan.html">📋 Stakeholder plan</a>
-  </nav>
-</div>
-<header class="site-head">
-  <a class="logo" href="index.html"><img src="assets/cipc-logo-white.png" alt="City and Hackney Integrated Primary Care"></a>
-  <span class="login-status"><span class="dot"></span>You are logged in</span>
-  <button class="search-btn" type="button" aria-label="Search">⌕</button>
-  <nav class="site-nav">
-    <a href="index.html">HOME</a>
-    <span class="menu">
-      <a href="pathways.html" class="active">GENERAL PRACTICE ⌄</a>
-      <span class="dropdown"><span class="dd-panel">
-      <a href="pathways.html"><span class="ico-s">↝</span>Pathways</a>
-      <a href="services.html" class="active"><span class="ico-s">▦</span>Services</a>
-      <a href="topics.html"><span class="ico-s">◧</span>Topics</a>
-      </span></span>
-    </span>
-    <span class="menu">
-      <a href="bulletins.html"><span class="lock">🔒</span> IPC ⌄</a>
-      <span class="dropdown"><span class="dd-panel">
-      <a href="bulletins.html"><span class="ico-s">▤</span>Bulletins <span class="lock">🔒</span></a>
-      <a href="contracts.html"><span class="ico-s">✎</span>Contracts <span class="lock">🔒</span></a>
-      <a href="documents.html"><span class="ico-s">▣</span>Documents <span class="lock">🔒</span></a>
-      <a href="policies.html"><span class="ico-s">✓</span>Policies <span class="lock">🔒</span></a>
-      <a href="staff-bank.html"><span class="ico-s">☺</span>Staff Bank <span class="lock">🔒</span></a>
-      </span></span>
-    </span>
-    <a href="saved.html"><span class="lock" style="opacity:1;">☆</span> SAVED</a>
-  </nav>
-</header>
-<section class="hero-sub">
-  <div class="crumb"><a href="index.html">Portal</a> / <span class="here">Services</span></div>
-  <div class="hero-sub-row">
-    <div>
-      <h1>Services</h1>
-      <div class="meta" data-edit>Local services and how to refer</div>
-    </div>
-    <div class="searchbar" role="search"><span class="icon">⌕</span><input type="search" placeholder="Search services…"></div>
-  </div>
-</section>
-<main class="wrap">
-  <section class="section layout-side">
-    <div>
-      <div class="filterbar">
-        <button class="filter active" type="button">All services</button>
-        <button class="filter" type="button">Community</button>
-        <button class="filter" type="button">Secondary care</button>
-        <button class="filter" type="button">Self-referral</button>
-        <span class="sort">Sort: <b>A – Z</b></span>
-      </div>
-      <div class="doc-list">
-        <a class="doc-card" href="document.html">
-      <span class="badge docx">SVC</span>
-      <span class="body"><h3 data-edit> Community dermatology (incl. teledermatology)</h3><div class="meta" data-edit>Referral via e-RS · City &amp; Hackney</div></span>
-      <span class="view">View ↗</span>
-    </a>
-        <a class="doc-card" href="document.html">
-      <span class="badge docx">SVC</span>
-      <span class="body"><h3 data-edit> Talking Therapies (NHS TT)</h3><div class="meta" data-edit>Self-referral · All ages 18+</div></span>
-      <span class="view">View ↗</span>
-    </a>
-        <a class="doc-card" href="document.html">
-      <span class="badge docx">SVC</span>
-      <span class="body"><h3 data-edit> Community phlebotomy</h3><div class="meta" data-edit>Walk-in &amp; booked · 6 sites</div></span>
-      <span class="view">View ↗</span>
-    </a>
-        <a class="doc-card" href="document.html">
-      <span class="badge docx">SVC</span>
-      <span class="body"><h3 data-edit> Gloji — smoking cessation</h3><div class="meta" data-edit>Online referral · Adults</div></span>
-      <span class="view">View ↗</span>
-    </a>
-        <a class="doc-card" href="document.html">
-      <span class="badge docx">SVC</span>
-      <span class="body"><h3 data-edit> Community wound care</h3><div class="meta" data-edit>Referral form · Housebound priority</div></span>
-      <span class="view">View ↗</span>
-    </a>
-        <a class="doc-card" href="document.html">
-      <span class="badge docx">SVC</span>
-      <span class="body"><h3 data-edit> Proactive care (home visiting)</h3><div class="meta" data-edit>MDT referral · Frailty</div></span>
-      <span class="view">View ↗</span>
-    </a>
+<body data-nav="gp:services">
+<div id="site-chrome"></div>
+
+<main>
+  <section class="hero hero-compact">
+    <div class="container">
+      <div class="breadcrumb"><a href="home.html">Home</a> / General Practice / <span class="current">Services</span></div>
+      <h1 data-editable>Local services &amp; referrals</h1>
+      <p class="hero-sub" data-editable>Community and specialist services available to City &amp; Hackney patients, with how to refer.</p>
+      <div class="search-box">
+        <span class="icon">&#8981;</span>
+        <input type="search" placeholder="Search services, e.g. phlebotomy, smoking cessation, podiatry…" aria-label="Search services">
+        <button class="btn-search">Search</button>
       </div>
     </div>
-    <aside class="rail">
-      <div class="card">
-        <h3>About services</h3>
-        <p data-edit>Every service page lists eligibility, how to refer, and contact details — kept current by the IPC team.</p>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="filter-bar">
+        <button class="filter-pill is-active">All services</button>
+        <button class="filter-pill">Community</button>
+        <button class="filter-pill">Mental health</button>
+        <button class="filter-pill">Diagnostics</button>
+        <button class="filter-pill">Lifestyle &amp; prevention</button>
+        <span class="sort">Sort: <b>A–Z</b></span>
       </div>
-    </aside>
+
+      <div class="result-list">
+        <a class="result-card" href="#">
+          <span class="badge badge-green">SVC</span>
+          <div class="result-body">
+            <h3>Community phlebotomy</h3>
+            <div class="result-meta">Diagnostics · Walk-in and bookable · 6 sites across City &amp; Hackney</div>
+          </div>
+          <button class="star" title="Save">&#9734;</button>
+          <span class="result-action">Details &rsaquo;</span>
+        </a>
+        <a class="result-card" href="#">
+          <span class="badge badge-green">SVC</span>
+          <div class="result-body">
+            <h3>Smoking cessation (Gloji)</h3>
+            <div class="result-meta">Lifestyle &amp; prevention · Self-referral or GP referral form</div>
+          </div>
+          <button class="star is-saved" title="Saved">&#9733;</button>
+          <span class="result-action">Details &rsaquo;</span>
+        </a>
+        <a class="result-card" href="#">
+          <span class="badge badge-green">SVC</span>
+          <div class="result-body">
+            <h3>Teledermatology</h3>
+            <div class="result-meta">Diagnostics · Advice &amp; guidance within 48 hours</div>
+          </div>
+          <button class="star" title="Save">&#9734;</button>
+          <span class="result-action">Details &rsaquo;</span>
+        </a>
+        <a class="result-card" href="#">
+          <span class="badge badge-green">SVC</span>
+          <div class="result-body">
+            <h3>Talking Therapies (NHS)</h3>
+            <div class="result-meta">Mental health · Self-referral encouraged</div>
+          </div>
+          <button class="star" title="Save">&#9734;</button>
+          <span class="result-action">Details &rsaquo;</span>
+        </a>
+        <a class="result-card" href="#">
+          <span class="badge badge-green">SVC</span>
+          <div class="result-body">
+            <h3>Community podiatry</h3>
+            <div class="result-meta">Community · Referral form · Priority for diabetic foot</div>
+          </div>
+          <button class="star" title="Save">&#9734;</button>
+          <span class="result-action">Details &rsaquo;</span>
+        </a>
+        <a class="result-card" href="#">
+          <span class="badge badge-green">SVC</span>
+          <div class="result-body">
+            <h3>Social prescribing link workers</h3>
+            <div class="result-meta">Community · Refer via PCN team</div>
+          </div>
+          <button class="star" title="Save">&#9734;</button>
+          <span class="result-action">Details &rsaquo;</span>
+        </a>
+      </div>
+      <p style="text-align:center; margin-top:20px;"><a class="btn btn-ghost" href="#">Load more services</a></p>
+    </div>
   </section>
 </main>
-<footer class="site-foot">
-  <span>© 2026 City &amp; Hackney Integrated Primary Care</span>
-  <span><a href="#">Privacy</a> · <a href="#">Accessibility</a> · <a href="#">Terms</a></span>
-</footer>
-<script src="assets/edit.js"></script>
+
+<div id="site-footer"></div>
+<script src="js/portal.js"></script>
 </body>
 </html>
