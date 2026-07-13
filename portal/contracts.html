@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contracts — City &amp; Hackney IPC</title>
+<title>Contracts — City &amp; Hackney IPC Hub</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
@@ -12,10 +12,9 @@
 <body>
 <div class="proto-strip">
   <span class="tag">CHIPC PROTOTYPE</span>
-  <span>Members Portal redesign — Design 1 · The IPC Hub</span>
+  <span>The IPC Hub — one site for GPs and IPC members</span>
   <nav>
-    <a href="index.html">Portal</a>
-    <a href="gp.html">GP Hub</a>
+    <a href="index.html">Hub home</a>
     <a href="plan.html">📋 Stakeholder plan</a>
   </nav>
 </div>
@@ -24,19 +23,27 @@
   <span class="login-status"><span class="dot"></span>You are logged in</span>
   <button class="search-btn" type="button" aria-label="Search">⌕</button>
   <nav class="site-nav">
-    <a href="index.html">PORTAL HOME</a>
-    <a href="bulletins.html">BULLETINS ⌄</a>
-    <a href="contracts.html" class="active">CONTRACTS ⌄</a>
+    <a href="index.html">HOME</a>
+    <a href="pathways.html">PATHWAYS</a>
+    <a href="services.html">SERVICES</a>
+    <a href="topics.html">TOPICS</a>
     <a href="documents.html">DOCUMENTS</a>
-    <a href="policies.html">POLICIES</a>
-    <a href="staff-bank.html">STAFF BANK</a>
+    <a href="members.html" class="active"><span class="lock">🔒</span> MEMBERS ⌄</a>
   </nav>
 </header>
+<nav class="sub-nav">
+  <span class="lbl">🔒 MEMBERS AREA</span>
+  <a href="members.html">Members home</a>
+  <a href="bulletins.html">Bulletins</a>
+  <a href="contracts.html" class="active">Contracts</a>
+  <a href="policies.html">Policies</a>
+  <a href="staff-bank.html">Staff Bank</a>
+</nav>
 <section class="hero-sub">
-  <div class="crumb"><a href="index.html">Portal</a> / <span class="here">Contracts</span></div>
+  <div class="crumb"><a href="index.html">Hub</a> / <a href="members.html">Members</a> / <span class="here">Contracts</span></div>
   <div class="hero-sub-row">
     <div>
-      <h1>Contracts</h1>
+      <h1 data-edit><span class="lock">🔒</span> Contracts</h1>
       <div class="meta" data-edit>18 IPC contracts · specifications, targets, training and resources for 2026/27</div>
     </div>
     <div class="searchbar" role="search"><span class="icon">⌕</span><input type="search" placeholder="Search contracts…"></div>
@@ -51,7 +58,7 @@
       <button class="filter" type="button">Urgent access</button>
       <span class="sort">Sort: <b>A – Z</b></span>
     </div>
-    <div class="tiles" style="grid-template-columns:repeat(4,1fr);">
+    <div class="tiles cols-4">
       <a class="tile" href="contract-duty-doctor.html"><span class="ico">✎</span><h3>Anticoagulation</h3><p data-edit>Monitoring &amp; dosing service</p><div class="go">›</div></a>
       <a class="tile" href="contract-duty-doctor.html"><span class="ico">✎</span><h3>Cancer</h3><p data-edit>Early diagnosis &amp; safety-netting</p><div class="go">›</div></a>
       <a class="tile" href="contract-duty-doctor.html"><span class="ico">✎</span><h3>Duty Doctor</h3><p data-edit>Same-day urgent access</p><div class="go">›</div></a>

@@ -38,26 +38,27 @@
 <body>
 <div class="proto-strip">
   <span class="tag">CHIPC PROTOTYPE</span>
-  <span>Members Portal redesign — stakeholder plan</span>
+  <span>The combined IPC Hub — stakeholder plan</span>
   <nav><a href="index.html">← Back to the prototype</a></nav>
 </div>
 
 <div class="plan-wrap">
-  <h1>City &amp; Hackney IPC Members Portal — rebuild plan on a page</h1>
-  <p class="lede">What we're changing, what stays the same, and how we get from this prototype to the live site — for sign-off.</p>
+  <h1>City &amp; Hackney IPC Hub — rebuild plan on a page</h1>
+  <p class="lede">One combined site for GPs and IPC members: what we're changing, what stays the same, and how we get from this prototype to the live site — for sign-off.</p>
 
   <h2>The goal</h2>
-  <p>Rebuild the IPC area (Members Portal) to match the approved design (<b>Design 1 — The IPC Hub</b>): search-first, consistent across every page, and <b>editable by IPC admins directly on the page</b> — no developer needed for day-to-day content changes.</p>
+  <p><b>Merge the GP section and the Members Portal into one IPC Hub</b> — one site, one login, one search, one back end — in the approved design (<b>Design 1 — The IPC Hub</b>). Clinical content stays open to all practice staff; IPC members-only content sits on the same site and is simply marked with a <b>padlock 🔒</b>. Every page is <b>editable by IPC admins directly on the page</b> — no developer needed for day-to-day content changes.</p>
 
   <h2>What changes / what stays</h2>
   <div class="cols">
     <div class="box change">
       <h3>Changes</h3>
       <ul>
-        <li><b>Every portal page</b> gets the approved design — one consistent header, search and card system.</li>
-        <li><b>IPC Documents</b> adopt the pattern designed for the GP Section: search-first library, type filters, popular / recently-updated panels, and a proper document page with in-browser preview.</li>
+        <li><b>One site instead of two</b> — the GP section and Members Portal merge into a single IPC Hub with one navigation and one search across pathways, services, documents and contracts.</li>
+        <li><b>Padlock convention</b> — members-only items carry a 🔒 everywhere they appear (navigation, search results, listings). Members see everything seamlessly; visitors are asked to sign in only when they open a locked item.</li>
+        <li><b>One document library</b> in the pattern designed for the GP section: search-first, type filters, popular / recently-updated panels, and a document page with in-browser preview — open and members-only documents side by side.</li>
         <li><b>Front-end editing</b> — admins toggle "edit" on any page and change text in place (try the <i>✎ Admin: edit this page</i> button on the prototype).</li>
-        <li><b>One consolidated admin area</b> — a single, tidy back end for the whole IPC area instead of scattered edit screens.</li>
+        <li><b>One consolidated back end</b> — a single admin area for the whole hub; a tick-box marks any page or document as members-only and the padlock appears automatically.</li>
       </ul>
     </div>
     <div class="box keep">
@@ -65,29 +66,31 @@
       <ul>
         <li><b>Bulletins</b> — content and weekly publishing workflow are unchanged; only the page chrome is refreshed.</li>
         <li><b>All existing content</b> — documents, contracts, policies migrate over; nothing is lost.</li>
-        <li><b>Logins</b> — members keep their existing accounts.</li>
-        <li><b>The GP Section</b> — already designed; the portal now matches it.</li>
+        <li><b>Logins</b> — members keep their existing accounts; open clinical content needs no login at all.</li>
+        <li><b>The approved GP-section design</b> — the whole hub now uses it.</li>
       </ul>
     </div>
   </div>
 
-  <h2>Every page in the new portal (all clickable in this prototype)</h2>
+  <h2>The combined hub — every page (all clickable in this prototype)</h2>
   <div class="sitemap">
-    <div>🏠 <a href="index.html">Portal home</a> <span class="note">— search hero, quick access, popular / recent, events &amp; news</span></div>
-    <div class="lvl2">▤ <a href="bulletins.html">Bulletins</a> <span class="note">— as-is content, refreshed chrome</span></div>
-    <div class="lvl2">✎ <a href="contracts.html">Contracts</a> → <a href="contract-duty-doctor.html">contract page (e.g. Duty Doctor)</a> <span class="note">— resources, lead, about</span></div>
-    <div class="lvl2">▣ <a href="documents.html">Documents</a> → <a href="document.html">document page with preview</a> <span class="note">— GP-Section pattern</span></div>
-    <div class="lvl2">✓ <a href="policies.html">Policies</a> <span class="note">— owners, versions, review dates</span></div>
-    <div class="lvl2">☺ <a href="staff-bank.html">Staff Bank</a> <span class="note">— find work / find staff</span></div>
-    <div>🩺 <a href="gp.html">GP Hub</a> <span class="note">— the already-approved GP Section design (blue theme)</span></div>
+    <div>🏠 <a href="index.html">Hub home</a> <span class="note">— one search and one front door for everything below</span></div>
+    <div class="lvl2">↝ <a href="pathways.html">Pathways</a> · <a href="services.html">Services</a> · <a href="topics.html">Topics</a> <span class="note">— clinical content, open to all practice staff</span></div>
+    <div class="lvl2">▣ <a href="documents.html">Documents</a> → <a href="document.html">document page with preview</a> <span class="note">— one library, open + 🔒 side by side</span></div>
+    <div class="lvl2">🔒 <a href="members.html">Members area</a> <span class="note">— the IPC members-only front door</span></div>
+    <div class="lvl2" style="padding-left:52px;">▤ <a href="bulletins.html">Bulletins</a> <span class="note">— as-is content, refreshed chrome</span></div>
+    <div class="lvl2" style="padding-left:52px;">✎ <a href="contracts.html">Contracts</a> → <a href="contract-duty-doctor.html">contract page (e.g. Duty Doctor)</a> <span class="note">— resources, lead, about</span></div>
+    <div class="lvl2" style="padding-left:52px;">✓ <a href="policies.html">Policies</a> <span class="note">— owners, versions, review dates</span></div>
+    <div class="lvl2" style="padding-left:52px;">☺ <a href="staff-bank.html">Staff Bank</a> <span class="note">— find work / find staff</span></div>
   </div>
 
-  <h2>How editing will work (WordPress)</h2>
+  <h2>How the merged back end will work (WordPress)</h2>
   <ul>
+    <li><b>One WordPress install</b> for the whole hub — no more separate GP-section and portal back ends to keep in sync.</li>
     <li>The site is rebuilt as a <b>WordPress theme</b> matching this prototype exactly — each block here maps to an editable block in WordPress.</li>
     <li><b>Admins edit the front page (and every page) in place</b>; editors see the page exactly as members do.</li>
-    <li>Documents, contracts and policies become <b>structured content types</b> — upload a file, pick the contract/topic, and every listing, search result and "recently updated" panel updates itself.</li>
-    <li>One <b>consolidated IPC dashboard</b> in the back end: bulletins, documents, contracts, policies, events and news in a single menu, with clear roles for who can edit what.</li>
+    <li>Pathways, services, documents, contracts and policies become <b>structured content types</b> — upload a file, pick the topic/contract, tick "members only" if it is, and every listing, search result, padlock and "recently updated" panel updates itself.</li>
+    <li>One <b>consolidated IPC dashboard</b>: bulletins, documents, contracts, policies, pathways, events and news in a single menu, with clear roles for who can edit what (clinical editors, contracts team, comms, admins).</li>
   </ul>
 
   <h2>Getting to live</h2>

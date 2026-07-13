@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bulletins — City &amp; Hackney IPC</title>
+<title>Bulletins — City &amp; Hackney IPC Hub</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
@@ -12,10 +12,9 @@
 <body>
 <div class="proto-strip">
   <span class="tag">CHIPC PROTOTYPE</span>
-  <span>Members Portal redesign — Design 1 · The IPC Hub</span>
+  <span>The IPC Hub — one site for GPs and IPC members</span>
   <nav>
-    <a href="index.html">Portal</a>
-    <a href="gp.html">GP Hub</a>
+    <a href="index.html">Hub home</a>
     <a href="plan.html">📋 Stakeholder plan</a>
   </nav>
 </div>
@@ -24,19 +23,27 @@
   <span class="login-status"><span class="dot"></span>You are logged in</span>
   <button class="search-btn" type="button" aria-label="Search">⌕</button>
   <nav class="site-nav">
-    <a href="index.html">PORTAL HOME</a>
-    <a href="bulletins.html" class="active">BULLETINS ⌄</a>
-    <a href="contracts.html">CONTRACTS ⌄</a>
+    <a href="index.html">HOME</a>
+    <a href="pathways.html">PATHWAYS</a>
+    <a href="services.html">SERVICES</a>
+    <a href="topics.html">TOPICS</a>
     <a href="documents.html">DOCUMENTS</a>
-    <a href="policies.html">POLICIES</a>
-    <a href="staff-bank.html">STAFF BANK</a>
+    <a href="members.html" class="active"><span class="lock">🔒</span> MEMBERS ⌄</a>
   </nav>
 </header>
+<nav class="sub-nav">
+  <span class="lbl">🔒 MEMBERS AREA</span>
+  <a href="members.html">Members home</a>
+  <a href="bulletins.html" class="active">Bulletins</a>
+  <a href="contracts.html">Contracts</a>
+  <a href="policies.html">Policies</a>
+  <a href="staff-bank.html">Staff Bank</a>
+</nav>
 <section class="hero-sub">
-  <div class="crumb"><a href="index.html">Portal</a> / <span class="here">Bulletins</span></div>
+  <div class="crumb"><a href="index.html">Hub</a> / <a href="members.html">Members</a> / <span class="here">Bulletins</span></div>
   <div class="hero-sub-row">
     <div>
-      <h1>Bulletins</h1>
+      <h1 data-edit><span class="lock">🔒</span> Bulletins</h1>
       <div class="meta" data-edit>Weekly IPC bulletin — latest edition and full archive</div>
     </div>
     <div class="searchbar" role="search"><span class="icon">⌕</span><input type="search" placeholder="Search bulletins…"></div>
@@ -52,14 +59,14 @@
       </div>
       <div class="card-head" style="margin-top:18px;"><h2>July 2026</h2></div>
       <div class="rows">
-        <a class="row" href="#"><span class="badge pdf">PDF</span><span class="title">IPC Bulletin — w/c 30 June 2026</span><span class="meta">3 Jul 2026</span></a>
+        <a class="row" href="#"><span class="badge pdf">PDF</span><span class="title" data-edit>IPC Bulletin — w/c 30 June 2026</span><span class="meta">3 Jul 2026</span></a>
       </div>
       <div class="card-head" style="margin-top:18px;"><h2>June 2026</h2></div>
       <div class="rows">
-        <a class="row" href="#"><span class="badge pdf">PDF</span><span class="title">IPC Bulletin — w/c 23 June 2026</span><span class="meta">26 Jun 2026</span></a>
-        <a class="row" href="#"><span class="badge pdf">PDF</span><span class="title">IPC Bulletin — w/c 16 June 2026</span><span class="meta">19 Jun 2026</span></a>
-        <a class="row" href="#"><span class="badge pdf">PDF</span><span class="title">IPC Bulletin — w/c 9 June 2026</span><span class="meta">12 Jun 2026</span></a>
-        <a class="row" href="#"><span class="badge pdf">PDF</span><span class="title">IPC Bulletin — w/c 2 June 2026</span><span class="meta">5 Jun 2026</span></a>
+        <a class="row" href="#"><span class="badge pdf">PDF</span><span class="title" data-edit>IPC Bulletin — w/c 23 June 2026</span><span class="meta">26 Jun 2026</span></a>
+        <a class="row" href="#"><span class="badge pdf">PDF</span><span class="title" data-edit>IPC Bulletin — w/c 16 June 2026</span><span class="meta">19 Jun 2026</span></a>
+        <a class="row" href="#"><span class="badge pdf">PDF</span><span class="title" data-edit>IPC Bulletin — w/c 9 June 2026</span><span class="meta">12 Jun 2026</span></a>
+        <a class="row" href="#"><span class="badge pdf">PDF</span><span class="title" data-edit>IPC Bulletin — w/c 2 June 2026</span><span class="meta">5 Jun 2026</span></a>
       </div>
     </div>
     <div class="rail">
