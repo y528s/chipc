@@ -55,18 +55,22 @@ img { max-width: 100%; }
 @media (max-width: 760px) { .wrap { padding: 0 20px; } }
 
 /* --------------------------------------------------------------------------
-   Prototype strip (removed in the WordPress build)
+   Demo banner (removed in the WordPress build)
    -------------------------------------------------------------------------- */
 .proto-strip {
-  background: #2b2b28; color: #cfcfc6;
-  display: flex; align-items: center; gap: 18px;
+  background: #fdf0d2; color: #7a5b10; border-bottom: 1px solid #e8d5a8;
+  display: flex; align-items: center; gap: 14px;
   padding: 9px 28px; font-size: 12.5px; font-weight: 600;
   position: sticky; top: 0; z-index: 60;
 }
-.proto-strip .tag { color: var(--ipc-gold); font-family: var(--font-head); font-weight: 700; }
+.proto-strip .tag {
+  background: var(--ipc-gold); color: #fff; font-family: var(--font-head);
+  font-weight: 700; font-size: 11px; letter-spacing: 0.05em;
+  padding: 3px 10px; border-radius: 6px; white-space: nowrap;
+}
 .proto-strip nav { margin-left: auto; display: flex; gap: 16px; flex-wrap: wrap; }
-.proto-strip a { color: #cfcfc6; font-weight: 600; }
-.proto-strip a:hover { color: #fff; }
+.proto-strip a { color: #7a5b10; font-weight: 700; text-decoration: underline; }
+.proto-strip a:hover { color: #4d3800; }
 
 /* --------------------------------------------------------------------------
    Site header  (WP: header.php — green portal chrome / blue GP chrome)
@@ -91,12 +95,36 @@ img { max-width: 100%; }
   background: rgba(255,255,255,0.14); border-radius: 10px; padding: 5px;
   flex-wrap: wrap;
 }
-.site-nav a {
-  color: #fff; font-size: 11.5px; font-weight: 600; letter-spacing: 0.02em;
-  padding: 9px 10px; white-space: nowrap; border-radius: 7px;
+.site-nav > a, .site-nav .menu > a {
+  color: #fff; font-size: 12px; font-weight: 600; letter-spacing: 0.03em;
+  padding: 9px 12px; white-space: nowrap; border-radius: 7px; display: block;
 }
-.site-nav a:hover { background: rgba(255,255,255,0.12); color: #fff; }
-.site-nav a.active { background: var(--cream-nav); color: var(--ipc-green); padding: 9px 12px; }
+.site-nav > a:hover, .site-nav .menu > a:hover { background: rgba(255,255,255,0.12); color: #fff; }
+.site-nav > a.active, .site-nav .menu > a.active { background: var(--cream-nav); color: var(--ipc-green); padding: 9px 14px; }
+
+/* Dropdown menus (IPC / General Practice groups — menu-only structure) */
+.site-nav .menu { position: relative; }
+.site-nav .menu .dropdown {
+  display: none; position: absolute; top: 100%; left: 0; padding-top: 6px; z-index: 70;
+}
+.site-nav .menu:hover .dropdown,
+.site-nav .menu:focus-within .dropdown { display: block; }
+.dd-panel {
+  display: block; background: #fff; border-radius: 10px; box-shadow: 0 12px 32px rgba(0,0,0,0.28);
+  padding: 6px; min-width: 210px;
+}
+.dd-panel a {
+  display: flex; align-items: center; gap: 10px;
+  color: var(--ink); font-size: 13px; font-weight: 600; letter-spacing: 0;
+  padding: 10px 12px; border-radius: 7px; white-space: nowrap;
+}
+.dd-panel a:hover { background: var(--tint-green); color: var(--ipc-green); }
+.dd-panel a.active { background: var(--tint-green); color: var(--ipc-green); }
+.dd-panel .ico-s {
+  width: 26px; height: 26px; border-radius: 7px; background: var(--tint-green);
+  display: grid; place-items: center; font-size: 13px; color: var(--ipc-green); flex: none;
+}
+.dd-panel a .lock { margin-left: auto; }
 .theme-blue .site-nav a.active { color: var(--ipc-blue); }
 
 /* Padlock — the single convention marking IPC members-only content */
