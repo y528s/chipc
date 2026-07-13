@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saved items — City &amp; Hackney IPC Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/portal.css">
+</head>
+<body>
+<div class="proto-strip">
+  <span class="tag">CHIPC PROTOTYPE</span>
+  <span>One IPC portal — GP and member content consolidated</span>
+  <nav>
+    <a href="index.html">Portal home</a>
+    <a href="plan.html">📋 Stakeholder plan</a>
+  </nav>
+</div>
+<header class="site-head">
+  <a class="logo" href="index.html"><img src="assets/cipc-logo-white.png" alt="City and Hackney Integrated Primary Care"></a>
+  <span class="login-status"><span class="dot"></span>You are logged in</span>
+  <button class="search-btn" type="button" aria-label="Search">⌕</button>
+  <nav class="site-nav">
+    <a href="index.html">HOME</a>
+    <a href="pathways.html">PATHWAYS</a>
+    <a href="services.html">SERVICES</a>
+    <a href="topics.html">TOPICS</a>
+    <a href="documents.html">DOCUMENTS</a>
+    <a href="bulletins.html"><span class="lock">🔒</span> BULLETINS</a>
+    <a href="contracts.html"><span class="lock">🔒</span> CONTRACTS</a>
+    <a href="policies.html"><span class="lock">🔒</span> POLICIES</a>
+    <a href="staff-bank.html"><span class="lock">🔒</span> STAFF BANK</a>
+    <a href="saved.html" class="active"><span class="lock" style="opacity:1;">☆</span> SAVED</a>
+  </nav>
+</header>
+<section class="hero-sub">
+  <div class="crumb"><a href="index.html">Portal</a> / <span class="here">Saved items</span></div>
+  <div class="hero-sub-row">
+    <div>
+      <h1>☆ Saved items</h1>
+      <div class="meta">Everything you've starred across the portal — pathways, documents, services and contract pages — searchable in one place.</div>
+    </div>
+    <div class="searchbar" role="search"><span class="icon">⌕</span><input type="search" id="savedSearch" placeholder="Search your saved items…"></div>
+  </div>
+</section>
+<main class="wrap">
+  <section class="section">
+    <div class="filterbar">
+      <button class="filter active" type="button" data-filter="all">All (<span id="savedCount">8</span>)</button>
+      <button class="filter" type="button" data-filter="pathway">Pathways &amp; forms</button>
+      <button class="filter" type="button" data-filter="document">Documents</button>
+      <button class="filter" type="button" data-filter="service">Services</button>
+      <button class="filter" type="button" data-filter="contract">Contracts</button>
+      <span class="sort">Sort: <b>Recently saved</b></span>
+    </div>
+    <div class="doc-list" id="savedList">
+      <a class="doc-card saved-item" data-kind="pathway" href="document.html">
+      <span class="badge docx">PATH</span>
+      <span class="body"><h3>Abnormal liver function tests (adults)</h3><div class="meta">Pathway · Gastroenterology · saved 2 days ago</div></span>
+      <button class="unsave" type="button" title="Remove from saved" aria-label="Remove from saved">★</button>
+    </a>
+      <a class="doc-card saved-item" data-kind="document" href="document.html">
+      <span class="badge docx">DOCX</span>
+      <span class="body"><h3><span class="lock">🔒</span> 2026/27 Duty Doctor Service Specification — Final</h3><div class="meta">Document · Contracts · saved 3 days ago</div></span>
+      <button class="unsave" type="button" title="Remove from saved" aria-label="Remove from saved">★</button>
+    </a>
+      <a class="doc-card saved-item" data-kind="pathway" href="document.html">
+      <span class="badge docx">PATH</span>
+      <span class="body"><h3>ADHD in adults</h3><div class="meta">Pathway · Mental Health · saved last week</div></span>
+      <button class="unsave" type="button" title="Remove from saved" aria-label="Remove from saved">★</button>
+    </a>
+      <a class="doc-card saved-item" data-kind="contract" href="contract-duty-doctor.html">
+      <span class="badge ">CONTRACT</span>
+      <span class="body"><h3><span class="lock">🔒</span> Duty Doctor</h3><div class="meta">Contract page · saved last week</div></span>
+      <button class="unsave" type="button" title="Remove from saved" aria-label="Remove from saved">★</button>
+    </a>
+      <a class="doc-card saved-item" data-kind="pathway" href="document.html">
+      <span class="badge form">FORM</span>
+      <span class="body"><h3>Cardiology referral form</h3><div class="meta">Form · Cardiology · saved 2 weeks ago</div></span>
+      <button class="unsave" type="button" title="Remove from saved" aria-label="Remove from saved">★</button>
+    </a>
+      <a class="doc-card saved-item" data-kind="service" href="services.html">
+      <span class="badge docx">SVC</span>
+      <span class="body"><h3>Gloji — smoking cessation</h3><div class="meta">Service · saved 3 weeks ago</div></span>
+      <button class="unsave" type="button" title="Remove from saved" aria-label="Remove from saved">★</button>
+    </a>
+      <a class="doc-card saved-item" data-kind="document" href="document.html">
+      <span class="badge pdf">PDF</span>
+      <span class="body"><h3><span class="lock">🔒</span> Rates card 2026/27</h3><div class="meta">Document · Staff Bank · saved last month</div></span>
+      <button class="unsave" type="button" title="Remove from saved" aria-label="Remove from saved">★</button>
+    </a>
+      <a class="doc-card saved-item" data-kind="document" href="document.html">
+      <span class="badge ">PPTX</span>
+      <span class="body"><h3><span class="lock">🔒</span> Early Onset T2 Diabetes training slides</h3><div class="meta">Document · Training · saved last month</div></span>
+      <button class="unsave" type="button" title="Remove from saved" aria-label="Remove from saved">★</button>
+    </a>
+    </div>
+    <div class="notice" id="savedEmpty" style="display:none;">Nothing in your saved items matches that — try a different search or filter.</div>
+    <p style="font-size:13px; color:var(--grey); margin-top:18px;">Star anything on the portal with the <b>☆ Save</b> button to add it here. Your saved list is personal to your login and syncs across devices.</p>
+  </section>
+</main>
+<script>
+(function () {
+  var input = document.getElementById('savedSearch');
+  var list = document.getElementById('savedList');
+  var empty = document.getElementById('savedEmpty');
+  var count = document.getElementById('savedCount');
+  var filters = document.querySelectorAll('.filterbar .filter');
+  var activeKind = 'all';
+
+  function apply() {
+    var q = input.value.trim().toLowerCase();
+    var shown = 0;
+    list.querySelectorAll('.saved-item').forEach(function (el) {
+      var matchKind = activeKind === 'all' || el.dataset.kind === activeKind;
+      var matchText = !q || el.textContent.toLowerCase().indexOf(q) !== -1;
+      var show = matchKind && matchText;
+      el.style.display = show ? '' : 'none';
+      if (show) shown++;
+    });
+    empty.style.display = shown ? 'none' : '';
+  }
+
+  input.addEventListener('input', apply);
+  filters.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      filters.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      activeKind = btn.dataset.filter;
+      apply();
+    });
+  });
+  list.addEventListener('click', function (e) {
+    var btn = e.target.closest('.unsave');
+    if (!btn) return;
+    e.preventDefault();
+    btn.closest('.saved-item').remove();
+    count.textContent = list.querySelectorAll('.saved-item').length;
+    apply();
+  });
+})();
+</script>
+<footer class="site-foot">
+  <span>© 2026 City &amp; Hackney Integrated Primary Care</span>
+  <span><a href="#">Privacy</a> · <a href="#">Accessibility</a> · <a href="#">Terms</a></span>
+</footer>
+<script src="assets/edit.js"></script>
+</body>
+</html>

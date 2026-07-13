@@ -408,3 +408,10 @@ body.editing .contact-band [data-edit]:focus { background: rgba(0,0,0,0.25); }
   background: var(--ipc-green); color: #fff; font-weight: 600; font-size: 13.5px;
   padding: 12px 22px; border-radius: 999px; box-shadow: 0 6px 20px rgba(0,0,0,0.3); z-index: 101;
 }
+
+/* Saved items */
+.doc-card .unsave {
+  border: 0; background: var(--tint-gold); color: var(--ipc-gold); cursor: pointer;
+  width: 34px; height: 34px; border-radius: 8px; font-size: 16px; flex: none;
+}
+.doc-card .unsave:hover { background: var(--ipc-gold); color: #fff; }
