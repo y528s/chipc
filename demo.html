@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IPC Portal — Client Demo Walkthrough</title>
+<title>IPC Portal — Demo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
@@ -11,72 +11,45 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { background: #1d3317; font-family: 'Open Sans', sans-serif; }
   a { text-decoration: none; }
-  .page { min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 64px 32px 64px; }
+  .page { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 64px 32px; }
   .logo { width: 106px; height: auto; }
-  h1 { font-family: Poppins; font-weight: 700; font-size: 36px; color: #fff; margin-top: 20px; text-align: center; }
-  .lede { font-size: 17px; color: #B7C6BC; margin-top: 10px; max-width: 640px; text-align: center; line-height: 1.55; }
+  h1 { font-family: Poppins, sans-serif; font-weight: 700; font-size: 38px; color: #fff; margin-top: 22px; text-align: center; }
+  .lede { font-size: 17px; color: #B7C6BC; margin-top: 12px; max-width: 560px; text-align: center; line-height: 1.6; }
   .demo-pill {
-    margin-top: 18px; background: #c68a00; color: #fff; font-family: Poppins; font-weight: 600;
-    font-size: 12.5px; letter-spacing: 0.04em; padding: 7px 18px; border-radius: 999px;
+    margin-top: 20px; background: #c68a00; color: #fff; font-family: Poppins, sans-serif; font-weight: 600;
+    font-size: 12.5px; letter-spacing: 0.04em; padding: 8px 20px; border-radius: 999px;
   }
 
-  .ideas { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 26px; max-width: 900px; }
-  .idea {
-    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.28);
-    color: #fff; font-size: 12.5px; font-weight: 600; padding: 7px 15px; border-radius: 999px;
-  }
-
-  .grid { display: grid; grid-template-columns: repeat(4, 290px); gap: 20px; margin-top: 44px; }
-  @media (max-width: 1300px) { .grid { grid-template-columns: repeat(2, 290px); } }
-  @media (max-width: 680px) { .grid { grid-template-columns: 1fr; max-width: 340px; width: 100%; } }
+  .grid { display: grid; grid-template-columns: repeat(3, 320px); gap: 22px; margin-top: 48px; }
+  @media (max-width: 1100px) { .grid { grid-template-columns: 1fr; max-width: 360px; width: 100%; } }
 
   .card {
     background: #fff; border-radius: 14px; overflow: hidden; display: block;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: transform 0.12s;
   }
   .card:hover { transform: translateY(-3px); }
-  .card .head { height: 96px; padding: 14px 16px; position: relative; }
-  .card .body { padding: 16px 18px 18px; }
-  .step { font-family: Poppins; font-weight: 600; font-size: 12px; color: #9aa79f; letter-spacing: 0.05em; }
-  .card h3 { font-family: Poppins; font-weight: 600; font-size: 17px; color: #2c4a27; margin-top: 3px; }
-  .card p { font-size: 13px; color: #5c6660; line-height: 1.5; margin-top: 5px; }
-  .card .go { font-weight: 700; color: #43723c; font-size: 13.5px; margin-top: 11px; }
+  .card .head { height: 110px; padding: 16px 20px; }
+  .card .body { padding: 20px 22px 22px; }
+  .card h3 { font-family: Poppins, sans-serif; font-weight: 600; font-size: 19px; color: #2c4a27; }
+  .card p { font-size: 14px; color: #5c6660; line-height: 1.55; margin-top: 6px; }
+  .card .go { font-weight: 700; color: #43723c; font-size: 14px; margin-top: 14px; }
 
-  /* mini previews */
-  .mini-search { background: #fff; border-radius: 7px; display: flex; overflow: hidden; margin-top: 22px; box-shadow: 0 4px 12px rgba(0,0,0,0.25); }
-  .mini-search span:first-child { flex: 1; padding: 8px 13px; color: #8a948d; font-size: 12px; }
-  .mini-search span:last-child { background: #c68a00; color: #fff; font-family: Poppins; font-weight: 600; font-size: 11px; padding: 8px 14px; }
-  .mini-chips { display: flex; gap: 7px; align-items: flex-end; height: 100%; padding-bottom: 2px; flex-wrap: wrap; }
-  .chip-w { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.4); color: #fff; font-size: 10.5px; font-weight: 600; padding: 4px 11px; border-radius: 999px; }
-  .mini-rows { background: #fff; border-radius: 7px; margin-top: 14px; padding: 8px 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.25); font-size: 11px; color: #2c3a31; font-weight: 600; }
-  .mini-rows div { padding: 4px 0; border-bottom: 1px solid #EEF1EE; }
-  .mini-rows div:last-child { border-bottom: 0; }
-  .mini-star { position: absolute; right: 14px; top: 12px; font-size: 22px; color: #fff; opacity: 0.9; }
-  .wp-bar { background: #1d2327; border-radius: 6px 6px 0 0; margin-top: 20px; padding: 7px 10px; color: #c3c4c7; font-size: 10.5px; display: flex; gap: 8px; align-items: center; }
+  .mini-search { background: #fff; border-radius: 7px; display: flex; overflow: hidden; margin-top: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.25); }
+  .mini-search span:first-child { flex: 1; padding: 9px 14px; color: #8a948d; font-size: 12.5px; }
+  .mini-search span:last-child { background: #c68a00; color: #fff; font-family: Poppins, sans-serif; font-weight: 600; font-size: 12px; padding: 9px 16px; }
+  .wp-bar { background: #1d2327; border-radius: 6px 6px 0 0; margin-top: 26px; padding: 8px 12px; color: #c3c4c7; font-size: 11px; display: flex; gap: 8px; align-items: center; }
   .wp-dot { width: 12px; height: 12px; border-radius: 50%; background: #43723c; display: inline-block; }
-  .wp-panel { background: #f0f0f1; padding: 8px 10px; font-size: 10px; color: #3c434a; border-radius: 0 0 6px 6px; }
-  .edit-btn-mini { position: absolute; right: 14px; bottom: 12px; background: #2b2b28; color: #fff; font-family: Poppins; font-weight: 600; font-size: 10.5px; padding: 7px 12px; border-radius: 999px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
-  .edit-btn-mini b { color: #c68a00; }
+  .wp-panel { background: #f0f0f1; padding: 9px 12px; font-size: 10.5px; color: #3c434a; border-radius: 0 0 6px 6px; }
 
-  .foot { margin-top: 44px; font-size: 13.5px; color: #8fa096; text-align: center; line-height: 1.7; max-width: 560px; }
-  .foot a { color: #B7C6BC; text-decoration: underline; }
+  .foot { margin-top: 44px; font-size: 13.5px; color: #8fa096; text-align: center; line-height: 1.7; }
 </style>
 </head>
 <body>
 <div class="page">
   <img class="logo" src="portal/assets/cipc-logo-white.png" alt="City and Hackney Integrated Primary Care">
-  <h1>The new IPC Portal — demo walkthrough</h1>
-  <p class="lede">One consolidated portal for City &amp; Hackney primary care, in the approved IPC Hub design. The GP site and the IPC area become <b style="color:#fff;">one site, one login, one search, one back end</b> — member content is simply marked with a 🔒 wherever it appears.</p>
-  <div class="demo-pill">⚠ DESIGN DEMO ONLY — pages, links and content are illustrative</div>
-
-  <div class="ideas">
-    <span class="idea">One portal — the IPC area goes away</span>
-    <span class="idea">🔒 Access per item, not per area</span>
-    <span class="idea">IPC / GP split lives only in the menu</span>
-    <span class="idea">Bulletins unchanged</span>
-    <span class="idea">Admins edit on the page</span>
-    <span class="idea">One WordPress back end</span>
-  </div>
+  <h1>The new IPC Portal</h1>
+  <p class="lede">The GP site and the IPC area become one portal — one login, one search, one place to edit. Member-only content is simply marked with a 🔒.</p>
+  <div class="demo-pill">⚠ DESIGN DEMO — pages and links are illustrative only</div>
 
   <div class="grid">
     <a class="card" href="portal/index.html">
@@ -84,110 +57,37 @@
         <div class="mini-search"><span>Search pathways, contracts, documents…</span><span>Search</span></div>
       </div>
       <div class="body">
-        <div class="step">STEP 1</div>
-        <h3>Portal home</h3>
-        <p>Search-first front door for everything — quick access, popular &amp; recently updated, events and news.</p>
-        <div class="go">Open →</div>
-      </div>
-    </a>
-
-    <a class="card" href="portal/pathways.html">
-      <div class="head" style="background:linear-gradient(135deg, #053a66 0%, #074a81 48%, #7d56b4 100%);">
-        <div class="mini-chips"><span class="chip-w">ADHD</span><span class="chip-w">Chest pain</span><span class="chip-w">UTI</span><span class="chip-w">COPD</span></div>
-      </div>
-      <div class="body">
-        <div class="step">STEP 2 · GENERAL PRACTICE MENU</div>
-        <h3>Pathways · Services · Topics</h3>
-        <p>The clinical side — open to all practice staff, browsable three ways, no login needed.</p>
-        <div class="go">Open Pathways →</div>
-      </div>
-    </a>
-
-    <a class="card" href="portal/contract-duty-doctor.html">
-      <div class="head" style="background:linear-gradient(115deg, #1d3317 0%, #43723c 70%, #4ab182 100%);">
-        <div class="mini-rows"><div>🔒 Duty Doctor — 8 resources</div><div>🔒 Bulletins — unchanged</div><div>🔒 Policies · Staff Bank</div></div>
-      </div>
-      <div class="body">
-        <div class="step">STEP 3 · IPC MENU 🔒</div>
-        <h3>Member sections</h3>
-        <p>Contracts (e.g. Duty Doctor), Bulletins, Policies and Staff Bank — same portal, padlocked per item.</p>
-        <div class="go">Open Duty Doctor →</div>
-      </div>
-    </a>
-
-    <a class="card" href="portal/document.html">
-      <div class="head" style="background:#4a4a46;">
-        <div style="background:#fff; border-radius:5px; margin:16px 34px 0; height:64px; box-shadow:0 4px 14px rgba(0,0,0,0.4); padding:10px 12px;">
-          <div style="height:6px; background:rgba(43,43,40,0.18); border-radius:3px;"></div>
-          <div style="height:6px; background:rgba(43,43,40,0.14); border-radius:3px; margin-top:5px; width:85%;"></div>
-          <div style="height:6px; background:rgba(43,43,40,0.14); border-radius:3px; margin-top:5px; width:60%;"></div>
-        </div>
-      </div>
-      <div class="body">
-        <div class="step">STEP 4</div>
-        <h3>Document page</h3>
-        <p>In-browser preview, download, details, topics and related documents — the pattern for every file.</p>
-        <div class="go">Open →</div>
-      </div>
-    </a>
-
-    <a class="card" href="portal/saved.html">
-      <div class="head" style="background:linear-gradient(115deg, #1d3317 0%, #43723c 62%, #4ab182 100%);">
-        <span class="mini-star">☆</span>
-        <div class="mini-search"><span>Search your saved items…</span><span>Filter</span></div>
-      </div>
-      <div class="body">
-        <div class="step">STEP 5 · TRY IT</div>
-        <h3>Saved items</h3>
-        <p>Personal favourites from anywhere on the portal. The search and filters really work — try typing "duty".</p>
-        <div class="go">Open →</div>
-      </div>
-    </a>
-
-    <a class="card" href="portal/index.html">
-      <div class="head" style="background:#f7f4ec;">
-        <div style="font-family:Poppins; font-weight:600; font-size:13px; color:#2c4a27; margin-top:8px; outline:2px dashed rgba(198,138,0,0.7); outline-offset:4px; display:inline-block;">Click any outlined text and type…</div>
-        <span class="edit-btn-mini"><b>✎</b> Admin: edit this page</span>
-      </div>
-      <div class="body">
-        <div class="step">STEP 6 · TRY IT</div>
-        <h3>Editing on the page</h3>
-        <p>Press the ✎ button on any page, click highlighted text and type. This is how admins will edit the real site.</p>
-        <div class="go">Try it on the home page →</div>
+        <h3>The portal</h3>
+        <p>Start here — every page is clickable. Try the ✎ edit button and the Saved items search while you're in.</p>
+        <div class="go">Open the portal →</div>
       </div>
     </a>
 
     <a class="card" href="portal/admin.html">
       <div class="head" style="background:#2c3338;">
         <div class="wp-bar"><span class="wp-dot"></span> IPC Portal — one dashboard</div>
-        <div class="wp-panel">Pathways · Documents · Bulletins 🔒 · Contracts 🔒 · Policies 🔒 …<br><b style="color:#43723c;">☑ Members only</b> — padlock appears automatically</div>
+        <div class="wp-panel"><b style="color:#43723c;">☑ Members only</b> — the padlock appears automatically</div>
       </div>
       <div class="body">
-        <div class="step">STEP 7</div>
-        <h3>Back-end preview</h3>
-        <p>The consolidated WordPress dashboard — one content menu, per-item member access, clear roles.</p>
-        <div class="go">Open →</div>
+        <h3>The back end</h3>
+        <p>One WordPress dashboard for everything — how documents are added and made member-only.</p>
+        <div class="go">See the back end →</div>
       </div>
     </a>
 
     <a class="card" href="portal/plan.html">
       <div class="head" style="background:#43723c; display:flex; align-items:center; justify-content:center;">
-        <div style="font-family:Poppins; font-weight:700; font-size:34px; color:#fff;">📋</div>
+        <span style="font-size:40px;">📋</span>
       </div>
       <div class="body">
-        <div class="step">STEP 8 · THE ASK</div>
-        <h3>Plan on a page</h3>
-        <p>What changes, what stays, how editing works, and the staging → live rollout — for sign-off.</p>
-        <div class="go">Open →</div>
+        <h3>The plan</h3>
+        <p>What changes, what stays (bulletins don't change), and how we get to live — on one page.</p>
+        <div class="go">Read the plan →</div>
       </div>
     </a>
   </div>
 
-  <div class="foot">
-    Every page is clickable and shown in the approved <b style="color:#B7C6BC;">Design 1 — The IPC Hub</b> style.
-    Bulletins keep their current content and workflow. <br>
-    Original design boards: <a href="index.html">three visual directions</a> · Prepared by Fusion · July 2026
-  </div>
+  <div class="foot">Approved design: The IPC Hub · Prepared by Fusion · July 2026</div>
 </div>
 </body>
 </html>
