@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Back-end preview — City &amp; Hackney IPC Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/portal.css">
+<style>
+  /* WordPress-admin look, IPC-accented — a static design mock */
+  body { background: #f0f0f1; }
+  .admin-bar {
+    background: #1d2327; color: #c3c4c7; display: flex; align-items: center; gap: 14px;
+    padding: 0 16px; height: 38px; font-size: 13px;
+  }
+  .admin-bar .wp-logo { width: 20px; height: 20px; border-radius: 50%; background: #43723c; color: #fff; display: grid; place-items: center; font-size: 11px; font-weight: 700; }
+  .admin-bar b { color: #fff; font-weight: 600; }
+  .admin-bar .right { margin-left: auto; display: flex; gap: 16px; }
+  .admin-bar a { color: #c3c4c7; }
+  .admin-bar a:hover { color: #72aee6; }
+
+  .admin-wrap { display: flex; min-height: calc(100vh - 38px - 41px); }
+
+  .admin-menu { width: 190px; flex: none; background: #1d2327; padding: 10px 0 30px; }
+  .admin-menu a {
+    display: flex; align-items: center; gap: 10px; color: #c3c4c7;
+    font-size: 13.5px; padding: 9px 14px;
+  }
+  .admin-menu a:hover { color: #72aee6; background: #2c3338; }
+  .admin-menu a.on { background: var(--ipc-green); color: #fff; font-weight: 600; }
+  .admin-menu .mi { width: 18px; text-align: center; opacity: 0.85; }
+  .admin-menu .sep { border-top: 1px solid #2c3338; margin: 8px 0; }
+  .admin-menu .grp { color: #8c8f94; font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 10px 14px 4px; }
+
+  .admin-main { flex: 1; padding: 24px 28px 48px; min-width: 0; }
+  .admin-main h1 { font-family: var(--font-head); font-weight: 600; font-size: 22px; color: #1d2327; }
+  .admin-main .sub { color: #646970; font-size: 13.5px; margin-top: 3px; }
+
+  .a-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
+  .a-grid-2 { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 16px; margin-top: 16px; }
+  @media (max-width: 1000px) { .a-grid, .a-grid-2 { grid-template-columns: 1fr; } }
+
+  .a-card { background: #fff; border: 1px solid #dcdcde; border-radius: 4px; }
+  .a-card h2 {
+    font-family: var(--font-head); font-size: 14px; font-weight: 600; color: #1d2327;
+    padding: 12px 16px; border-bottom: 1px solid #f0f0f1;
+  }
+  .a-card .pad { padding: 14px 16px; }
+
+  .glance { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .glance a { display: flex; align-items: baseline; gap: 8px; color: #2271b1; font-size: 13.5px; padding: 5px 0; }
+  .glance b { font-family: var(--font-head); font-size: 17px; color: #1d2327; }
+  .glance .lock { font-size: 11px; }
+
+  .a-row { display: flex; gap: 10px; align-items: center; padding: 9px 0; border-bottom: 1px solid #f0f0f1; font-size: 13px; color: #3c434a; }
+  .a-row:last-child { border-bottom: 0; }
+  .a-row .who { color: #646970; margin-left: auto; white-space: nowrap; font-size: 12px; }
+  .a-row .warn { color: #b32d2e; font-weight: 600; }
+  .a-row .badge { font-size: 10px; }
+
+  .btn-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .a-btn {
+    background: var(--ipc-green); color: #fff; border: 0; border-radius: 3px; cursor: pointer;
+    font-size: 13px; font-weight: 600; padding: 8px 14px; font-family: var(--font-body);
+  }
+  .a-btn.ghost { background: #f6f7f7; color: #2271b1; border: 1px solid #2271b1; }
+
+  /* Mock edit form */
+  .field { margin-bottom: 14px; }
+  .field label { display: block; font-size: 12.5px; font-weight: 600; color: #1d2327; margin-bottom: 5px; }
+  .field input[type="text"], .field select {
+    width: 100%; padding: 8px 10px; border: 1px solid #8c8f94; border-radius: 3px;
+    font-size: 13.5px; font-family: var(--font-body); background: #fff; color: #2c3338;
+  }
+  .filebox { border: 1px dashed #8c8f94; border-radius: 3px; padding: 12px; font-size: 13px; color: #646970; display: flex; gap: 10px; align-items: center; }
+  .memberonly {
+    background: #fdf0d2; border: 1px solid #e8d5a8; border-radius: 4px; padding: 12px 14px;
+    display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: #6b5a1e;
+  }
+  .memberonly input { margin-top: 3px; width: 16px; height: 16px; accent-color: var(--ipc-gold); }
+  .memberonly b { color: #4d3800; }
+
+  table.roles { width: 100%; border-collapse: collapse; font-size: 13px; }
+  table.roles th { text-align: left; color: #646970; font-weight: 600; padding: 8px 10px; border-bottom: 1px solid #dcdcde; }
+  table.roles td { padding: 9px 10px; border-bottom: 1px solid #f0f0f1; color: #3c434a; }
+  table.roles tr:last-child td { border-bottom: 0; }
+  .yes { color: var(--ipc-green); font-weight: 700; }
+  .no { color: #c3c4c7; }
+
+  .mock-note {
+    margin-top: 20px; background: #fff; border-left: 4px solid var(--ipc-green);
+    border-radius: 3px; padding: 12px 16px; font-size: 13px; color: #3c434a;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+  }
+</style>
+</head>
+<body>
+<div class="proto-strip">
+  <span class="tag">⚠ DEMO SITE</span>
+  <span>Back-end preview (design mock) — this is what the consolidated WordPress dashboard will look like, not a working admin.</span>
+  <nav>
+    <a href="index.html">← Front of site</a>
+    <a href="plan.html">📋 Stakeholder plan</a>
+  </nav>
+</div>
+
+<div class="admin-bar">
+  <span class="wp-logo">W</span>
+  <b>City &amp; Hackney IPC Portal</b>
+  <a href="index.html">Visit portal</a>
+  <span class="right"><span>Howdy, IPC Admin</span></span>
+</div>
+
+<div class="admin-wrap">
+  <nav class="admin-menu">
+    <a href="#" class="on"><span class="mi">🏠</span>Dashboard</a>
+    <div class="grp">Content — one place</div>
+    <a href="#"><span class="mi">↝</span>Pathways</a>
+    <a href="#"><span class="mi">▦</span>Services</a>
+    <a href="#"><span class="mi">◧</span>Topics</a>
+    <a href="#"><span class="mi">▣</span>Documents</a>
+    <a href="#"><span class="mi">▤</span>Bulletins 🔒</a>
+    <a href="#"><span class="mi">✎</span>Contracts 🔒</a>
+    <a href="#"><span class="mi">✓</span>Policies 🔒</a>
+    <a href="#"><span class="mi">☺</span>Staff Bank 🔒</a>
+    <a href="#"><span class="mi">📅</span>Events</a>
+    <a href="#"><span class="mi">📰</span>News</a>
+    <div class="sep"></div>
+    <a href="#"><span class="mi">🖼</span>Media</a>
+    <a href="#"><span class="mi">👥</span>Users &amp; roles</a>
+    <a href="#"><span class="mi">⚙</span>Settings</a>
+  </nav>
+
+  <main class="admin-main">
+    <h1>IPC Portal dashboard</h1>
+    <div class="sub">One WordPress install for the whole portal — GP and IPC content managed side by side, with per-item member access.</div>
+
+    <div class="a-grid">
+      <div class="a-card">
+        <h2>At a glance</h2>
+        <div class="pad glance">
+          <a href="#"><b>1,263</b> Pathways</a>
+          <a href="#"><b>214</b> Documents</a>
+          <a href="#"><b>86</b> Services</a>
+          <a href="#"><b>18</b> Contracts <span class="lock">🔒</span></a>
+          <a href="#"><b>156</b> Bulletins <span class="lock">🔒</span></a>
+          <a href="#"><b>12</b> Policies <span class="lock">🔒</span></a>
+        </div>
+      </div>
+      <div class="a-card">
+        <h2>Needs attention</h2>
+        <div class="pad">
+          <div class="a-row"><span class="warn">⚠ 2 policies due for review</span><span class="who">Safeguarding · Sep 2026</span></div>
+          <div class="a-row">Bulletin scheduled for Friday<span class="who">auto-publishes 08:00</span></div>
+          <div class="a-row">3 documents past review date<span class="who">Contracts team</span></div>
+          <div class="a-row">1 new Staff Bank registration to approve<span class="who">Bank team</span></div>
+        </div>
+      </div>
+      <div class="a-card">
+        <h2>Recent edits</h2>
+        <div class="pad">
+          <div class="a-row"><span class="badge docx">PATH</span>COPD pathway updated<span class="who">Dr R Palmer · yesterday</span></div>
+          <div class="a-row"><span class="badge">DOCX</span>Gloji referral form replaced<span class="who">Comms · 2 days</span></div>
+          <div class="a-row"><span class="badge pdf">PAGE</span>Portal home intro edited <i>(front-end)</i><span class="who">IPC Admin · 3 days</span></div>
+          <div class="a-row"><span class="badge form">EVENT</span>Duty Doctor training added<span class="who">Contracts · 4 days</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="a-grid-2">
+      <div class="a-card">
+        <h2>Add a document — the per-item access model</h2>
+        <div class="pad">
+          <div class="field">
+            <label>Title</label>
+            <input type="text" value="2026/27 Duty Doctor Service Specification — Final">
+          </div>
+          <div class="field">
+            <label>File</label>
+            <div class="filebox">📄 Duty-Doctor-Service-Spec-2026-27.pdf (310 KB) <a href="#">Replace</a></div>
+          </div>
+          <div class="field" style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+            <span>
+              <label>Belongs to</label>
+              <select><option>Contract: Duty Doctor</option><option>Pathway…</option><option>Policy…</option><option>Service…</option></select>
+            </span>
+            <span>
+              <label>Topics</label>
+              <select><option>Urgent care, Contracts</option></select>
+            </span>
+          </div>
+          <div class="memberonly">
+            <input type="checkbox" checked>
+            <span><b>Members only</b> — ticking this box is all it takes: the 🔒 padlock appears automatically everywhere this document is listed (menus, search results, listings), and non-members are asked to sign in when they open it.</span>
+          </div>
+          <div class="btn-row" style="margin-top:14px;">
+            <button class="a-btn" type="button">Publish</button>
+            <button class="a-btn ghost" type="button">Preview on portal</button>
+          </div>
+        </div>
+      </div>
+      <div class="a-card">
+        <h2>Who can edit what</h2>
+        <div class="pad">
+          <table class="roles">
+            <tr><th>Role</th><th>GP content</th><th>IPC 🔒</th><th>Pages</th><th>Users</th></tr>
+            <tr><td>Clinical editors</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td><td class="no">—</td></tr>
+            <tr><td>Contracts team</td><td class="no">—</td><td class="yes">✓</td><td class="no">—</td><td class="no">—</td></tr>
+            <tr><td>Comms</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">—</td></tr>
+            <tr><td>IPC admins</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+          </table>
+          <div style="font-size:12.5px; color:#646970; margin-top:12px;">
+            Every role edits in the same place. Admins can also edit any page
+            <b>directly on the front of the site</b> — the ✎ button you've seen
+            in the demo — and it saves here.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mock-note">
+      <b>What this replaces:</b> today the GP website and the IPC member zone are maintained in two separate back ends.
+      In the rebuild there is <b>one WordPress install and one dashboard</b> (this screen): the same content powers the
+      whole portal, member access is a per-item tick-box, and bulletins keep their existing weekly workflow untouched.
+    </div>
+  </main>
+</div>
+
+<footer class="site-foot">
+  <span>© 2026 City &amp; Hackney Integrated Primary Care — back-end design mock</span>
+  <span><a href="index.html">Front of site</a> · <a href="plan.html">Stakeholder plan</a></span>
+</footer>
+</body>
+</html>
